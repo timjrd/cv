@@ -7,7 +7,7 @@ stdenv.lib.overrideDerivation (
   nativeBuildInputs = x.nativeBuildInputs ++ [
     chromium
   ];
-  postUnpack  = "(cd $sourceRoot && rm -rf dist lang)";
-  buildPhase  = "bash build";
-  postInstall = "cp -r index.html res lang $out";
+  postUnpack   = "(cd $sourceRoot && rm -rf dist lang)";
+  buildPhase   = "NO_CONFIGURE=true bash build";
+  postInstall  = "cp -r index.html res lang $out";
 })

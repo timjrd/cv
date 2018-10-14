@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-runhaskell Setup.hs configure
+test -z $NO_CONFIGURE && runhaskell Setup.hs configure
 runhaskell Setup.hs build
 
 mkdir -p lang
