@@ -1,5 +1,5 @@
 { pkgs ? import ./pkgs.nix {} }:
-with pkgs; with (import ./nodepkgs {});
+with pkgs; with (import ./nodepkgs {inherit pkgs;});
 stdenv.lib.overrideDerivation (
   haskellPackages.developPackage {
     root = ./.;
