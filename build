@@ -1,15 +1,21 @@
 #!/usr/bin/env bash
 set -e
 
+tmp=$(mktemp -d)
+export HOME=$tmp
+
 test -z $NO_CONFIGURE && runhaskell Setup.hs configure
 runhaskell Setup.hs build
 
+autoprefixer-cli -b "last 90 versions" -o - res/style.css | cleancss -o res/style.prefix.min.css
+
 mkdir -p lang
 dist/build/cv/cv
-cd lang
 
+cd lang
 for src in *.html
 do
     chromium --headless --disable-gpu --print-to-pdf="${src%.html}.pdf" "$src"
 done
 
+rm -r $tmp
