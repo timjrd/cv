@@ -45,7 +45,7 @@ renderCV f cv cvs = renderHtml $ do
   H.html ! A.lang (toValue $ lang cv) $ do
     H.head $ do
       H.meta ! A.charset "utf-8"
-      H.meta ! A.name "viewport" ! A.content "width=device-width, initial-scale=1"
+      H.meta ! A.name "viewport" ! A.content "width=device-width, initial-scale=0"
       H.link ! A.rel "stylesheet" ! A.href "../res/style.prefix.min.css"
       H.title $ toHtml $ author cv
     H.body $ f cv cvs
