@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+runhaskell Setup.hs configure
+runhaskell Setup.hs build
+
+mkdir -p lang
+dist/build/cv/cv
+cd lang
+
+for src in *.html
+do
+    chromium --headless --disable-gpu --print-to-pdf="${src%.html}.pdf" "$src"
+done
+

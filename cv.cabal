@@ -55,15 +55,16 @@ executable cv
   
   -- Modules included in this executable, other than Main.
   other-modules:       CV
-                       CVRenderer
-                       Rich
+                       CV.Types
+                       CV.Renderer
+                       CV.Rich
   
   -- LANGUAGE extensions used by modules in this package.
   other-extensions:    OverloadedStrings
   
   -- Other library packages from which modules are imported.
   build-depends:       base, containers, bytestring,
-                       blaze-html
+                       blaze-markup, blaze-html
   
   -- Directories containing source files.
   hs-source-dirs:      src
