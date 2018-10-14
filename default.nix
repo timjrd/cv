@@ -9,7 +9,7 @@ stdenv.lib.overrideDerivation (
     autoprefixer-cli
     clean-css-cli
   ];
-  postUnpack   = "(cd $sourceRoot && rm -rf dist lang)";
+  postUnpack   = "(cd $sourceRoot && rm -rf index.html dist lang res/style.prefix.min.css)";
   buildPhase   = "NO_CONFIGURE=true bash build";
   postInstall  = "cp -r index.html res lang $out";
 })
