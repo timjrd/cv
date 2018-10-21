@@ -1,6 +1,6 @@
 {-# LANGUAGE ExistentialQuantification #-}
 
-module CV.Rich (Rich, Ref(Ref), (?), toRich, foldRich, fromRich) where
+module Cv.Rich (Rich, Ref(Ref), (?), toRich, foldRich, fromRich) where
 
 import Data.Sequence
 import Data.Monoid

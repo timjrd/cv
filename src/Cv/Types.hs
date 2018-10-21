@@ -1,12 +1,12 @@
-module CV.Types where
+module Cv.Types where
 
 import Data.Typeable
 -- import Data.String
 import Data.List
 
-import CV.Rich
+import Cv.Rich
 
-data CV = CV { lang          :: String
+data Cv = Cv { lang          :: String
              , hLang         :: String
              , hPortrait     :: String
              , hPositions    :: String
@@ -53,8 +53,7 @@ data Language = Language { language :: String
                          , status   :: String }
   deriving Eq
 
-data Skill = Skill { level   :: Rational
-                   , skill   :: String
+data Skill = Skill { skill   :: String
                    , details :: String }
   deriving Eq
 
@@ -63,14 +62,9 @@ data Reference = Reference { name :: (String,String)
                            , mail :: String }
   deriving (Eq, Typeable)
 
-preprocess :: CV -> CV
+preprocess :: Cv -> Cv
 preprocess cv = cv { publications = pubs'
                    , references   = refs' }
-                   -- , skills       = skills' }
   where
     pubs'   = nub $ publications cv ++ concatMap (fromRich . description) (positions cv)
     refs'   = nub $ references   cv ++ concatMap (fromRich . description) (positions cv)
-    -- skills' = map normLevel $ skills cv
-    -- normLevel x = x { level = (level x + lo) / (hi-lo) }
-    -- lo = minimum $ map level $ skills cv
-    -- hi = maximum $ map level $ skills cv

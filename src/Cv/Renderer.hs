@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module CV.Renderer (indexHtml, renderCV, compactLayout) where
+module Cv.Renderer (indexHtml, renderCv, compactLayout) where
 
 import Data.String
 import Data.List
@@ -15,10 +15,10 @@ import qualified Text.Blaze.XHtml5            as H
 import qualified Text.Blaze.XHtml5.Attributes as A
 import Text.Blaze.Html.Renderer.Utf8
 
-import CV.Types
-import CV.Rich
+import Cv.Types
+import Cv.Rich
 
-indexHtml :: CV -> [CV] -> ByteString
+indexHtml :: Cv -> [Cv] -> ByteString
 indexHtml cv cvs = renderHtml $ do
   H.docType
   H.html ! A.lang (toValue $ lang cv) $ do
@@ -39,20 +39,20 @@ indexHtml cv cvs = renderHtml $ do
           default_ _ = "default:"            :: Html
 
 
-renderCV :: (CV -> [CV] -> Html) -> CV -> [CV] -> ByteString
-renderCV f cv cvs = renderHtml $ do
+renderCv :: String -> (String -> Cv -> [Cv] -> Html) -> Cv -> [Cv] -> ByteString
+renderCv pdfPrefix f cv cvs = renderHtml $ do
   H.docType
   H.html ! A.lang (toValue $ lang cv) $ do
     H.head $ do
       H.meta ! A.charset "utf-8"
-      H.meta ! A.name "viewport" ! A.content "width=530"
+      H.meta ! A.name "viewport" ! A.content "width=540"
       H.link ! A.rel "stylesheet" ! A.href "../res/style.prefix.min.css"
       H.title $ toHtml $ author cv
-    H.body $ f cv cvs
+    H.body $ f pdfPrefix cv cvs
 
-compactLayout :: CV -> [CV] -> Html
-compactLayout cv cvs = do
-  navH cv cvs
+compactLayout :: String -> Cv -> [Cv] -> Html
+compactLayout pdfPrefix cv cvs = do
+  navH pdfPrefix cv cvs
   headerH cv
   introductionH cv
   columns .& shrink .$ do
@@ -65,13 +65,13 @@ compactLayout cv cvs = do
       languagesH    cv
       referencesH   cv      
 
-navH :: CV -> [CV] -> Html
-navH cv cvs = columns .$ H.nav .! leaf $ pdf cv >> mapM_ htm (delete cv cvs)
+navH :: String -> Cv -> [Cv] -> Html
+navH pdfPrefix cv cvs = columns .$ H.nav .! leaf $ pdf cv >> mapM_ htm (delete cv cvs)
   where
     htm x = H.a ! A.href (toValue $ lang x ++ ".html") $ toHtml $ hLang x
-    pdf x = H.a ! A.href (toValue $ lang x ++ ".pdf")  $ "pdf"
+    pdf x = H.a ! A.href (toValue $ pdfPrefix ++ lang x ++ ".pdf")  $ "PDF"
       
-headerH :: CV -> Html
+headerH :: Cv -> Html
 headerH cv = H.header .! columns $ horizontal .& leaf .$ do
   H.img ! A.alt (toValue $ hPortrait cv) ! A.src "../res/portrait.png"
   H.div $ do
@@ -85,10 +85,10 @@ headerH cv = H.header .! columns $ horizontal .& leaf .$ do
         H.div $ toHtml $ phone cv
       H.div $ toHtml $ age cv
 
-introductionH :: CV -> Html
+introductionH :: Cv -> Html
 introductionH cv = columns .& shrink .$ H.p .! leaf $ toHtml $ introduction cv
 
-positionsH :: CV -> Html
+positionsH :: Cv -> Html
 positionsH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hPositions cv
   H.table $ mapM_ f $ positions cv
@@ -99,7 +99,7 @@ positionsH cv = H.section .! leaf $ do
         H.ul .! horizontal $ mapM_ (H.li . toHtml) $ keywords x
         H.p $ (foldRich' cv $ description x) >> " " >> (http $ posUrl x)
 
-backgroundsH :: CV -> Html
+backgroundsH :: Cv -> Html
 backgroundsH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hBackgrounds cv
   H.table $ mapM_ f $ backgrounds cv
@@ -108,7 +108,7 @@ backgroundsH cv = H.section .! leaf $ do
       H.th $ toHtml $ date x
       H.td $ toHtml $ designation x
     
-publicationsH :: CV -> Html
+publicationsH :: Cv -> Html
 publicationsH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hPublications cv
   H.table $ mapM_ f $ publications cv
@@ -126,7 +126,7 @@ publicationsH cv = H.section .! leaf $ do
         H.em (toHtml $ pubDate x) >> ". "
         http $ pubUrl x
 
-languagesH :: CV -> Html  
+languagesH :: Cv -> Html  
 languagesH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hLanguages cv
   H.table $ mapM_ f $ languages cv
@@ -135,7 +135,7 @@ languagesH cv = H.section .! leaf $ do
       H.th $ toHtml $ language x
       H.td $ toHtml $ status x
 
-skillsH :: CV -> Html
+skillsH :: Cv -> Html
 skillsH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hSkills cv
   H.table
@@ -148,7 +148,7 @@ skillsH cv = H.section .! leaf $ do
       H.td $ toHtml $ details x
     trspace = H.tr .! space $ mempty
 
-referencesH :: CV -> Html  
+referencesH :: Cv -> Html  
 referencesH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hReferences cv
   H.table $ mapM_ f $ references cv
@@ -202,21 +202,21 @@ infixr 0 .$
 (.$) :: Class -> Html -> Html
 c .$ h = H.div .! c $ h
 
-ref :: CV -> Ref -> Html
+ref :: Cv -> Ref -> Html
 ref cv x = H.a .! ref_ ! A.href (toValue $ "#" ++ show id) $ toHtml id
   where id = indexOf cv x
 
-label :: (Eq a, Typeable a) => CV -> a -> Html
+label :: (Eq a, Typeable a) => Cv -> a -> Html
 label cv x = H.span .! ref_ ! A.id (toValue id) $ toHtml id
   where id = indexOf cv $ Ref x
 
-indexOf :: CV -> Ref -> Int
+indexOf :: Cv -> Ref -> Int
 indexOf cv x = (1+)
   $ maybe (error "indexOf: ref not found") id
   $ findIndex (x==)
   $ map Ref (publications cv)
   ++ map Ref (references cv)
   
-foldRich' :: CV -> Rich -> Html
+foldRich' :: Cv -> Rich -> Html
 foldRich' = foldRich toHtml . ref
 
