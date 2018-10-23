@@ -10,7 +10,7 @@ fr = Cv
   , hPositions    = "Expériences Professionnelles"
   , hBackgrounds  = "Formations"
   , hPublications = "Publication"
-  , hLanguages    = "Langues"
+  , hLanguages    = "Anglais"
   , hSkills       = "Compétences"
   , hReferences   = "Références"
 
@@ -73,12 +73,8 @@ fr = Cv
 
   , languages =
     [ Language
-      { language = "Français"
-      , status   = "Langue natale." }
-        
-    , Language
-      { language = "Anglais"
-      , status   = "Bon niveau général lu, écrit, parlé. Bon niveau technique : lecture quotidienne d'articles et de documentation. Section européenne anglais au lycée." } ]
+      { language = []
+      , status   = "CEFR B2 (niveau intermédiaire avancé). Lecture quotidienne d'articles techniques et de documentation." } ]
 
   , skills =
     [[ Skill
@@ -87,19 +83,19 @@ fr = Cv
 
      , Skill
        { skill   = "C++"
-       , details = "Intêret, plusieurs projets, expérience de stage, bonne maîtrise." }
+       , details = "Intêret. Plusieurs projets. Expérience de stage. Bonne maîtrise." }
 
      , Skill
        { skill   = "Java"
-       , details = "Plusieurs projets, expérience professionnelle, bonne maîtrise." }
+       , details = "Plusieurs projets. Expérience professionnelle. Bonne maîtrise." }
         
      , Skill
        { skill   = "C"
-       , details = "Plusieurs projets, maîtrise correct." }
+       , details = "Plusieurs projets. Maîtrise correct." }
       
      , Skill
        { skill   = "Scala"
-       , details = "Grand intêret, expérience professionnelle, maîtrise correct." } ]
+       , details = "Grand intêret. Expérience professionnelle. Maîtrise correct." } ]
 
     ,[ Skill
        { skill   = "GNU/Linux"
@@ -115,14 +111,14 @@ fr = Cv
 
     ,[ Skill
        { skill   = "CSS3"
-       , details = "Intêret, plusieurs projets, bonne maîtrise." }
+       , details = "Intêret. Plusieurs projets. Bonne maîtrise." }
 
      , Skill
        { skill   = "XHTML5"
        , details = "Maîtrise correct." } ]
 
     ,[ Skill
-       { skill   = ""
+       { skill   = []
        , details = "Adepte du logiciel libre. Curieux, culture approfondie en informatique." } ]]
 
   , references = [bourqui, dialo, gimbert, fijalkow]

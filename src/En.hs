@@ -78,52 +78,52 @@ en = Cv
         
     , Language
       { language = "English"
-      , status   = "Bon niveau général lu, écrit, parlé. Bon niveau technique : lecture quotidienne d'articles et de documentation. Section européenne anglais au lycée." } ]
+      , status   = "CEFR B2 (upper intermediate). Daily reading of technical articles and documentation." } ]
 
   , skills =
     [[ Skill
        { skill   = "Haskell"
-       , details = "Grand intêret. Principalement focalisé sur ce langage. Plusieurs projets réalisés. Expérience de stage. Bonne maîtrise du langage de base. Approfondissements réguliers." }
+       , details = "Very interested. Mainly focused on this language. Several projets done. Internship experience. Good command of the base language. Regular readings." }
 
      , Skill
        { skill   = "C++"
-       , details = "Intêret, plusieurs projets, expérience de stage, bonne maîtrise." }
+       , details = "Interested. Several projets. Internship experience. Good command." }
 
      , Skill
        { skill   = "Java"
-       , details = "Plusieurs projets, expérience professionnelle, bonne maîtrise." }
+       , details = "Several projects. Work experience. Good command." }
         
      , Skill
        { skill   = "C"
-       , details = "Plusieurs projets, maîtrise correct." }
+       , details = "Several projects. Decent command." }
       
      , Skill
        { skill   = "Scala"
-       , details = "Grand intêret, expérience professionnelle, maîtrise correct." } ]
+       , details = "Very interested. Work experience. Decent command." } ]
 
     ,[ Skill
        { skill   = "GNU/Linux"
-       , details = "Bonne connaissance et utilisation quotidienne." }
+       , details = "Good knowledge and daily usage." }
     
      , Skill
        { skill   = "Nix/NixOS"
-       , details = "Grand intêret et utilisation quotidienne. Maîtrise correct." }
+       , details = "Very interested. Daily usage. Decent command." }
 
      , Skill
        { skill   = "Git"
-       , details = "Bonne maîtrise." } ]
+       , details = "Good command." } ]
 
     ,[ Skill
        { skill   = "CSS3"
-       , details = "Intêret, plusieurs projets, bonne maîtrise." }
+       , details = "Interested. Several projects. Good command." }
 
      , Skill
        { skill   = "XHTML5"
-       , details = "Maîtrise correct." } ]
+       , details = "Decent command." } ]
 
     ,[ Skill
        { skill   = ""
-       , details = "Adepte du logiciel libre. Curieux, culture approfondie en informatique." } ]]
+       , details = "Free Software enthusiast. Inquisitive, in-depth computer science knowledge." } ]]
 
   , references = [bourqui, dialo, gimbert, fijalkow]
   }
@@ -132,26 +132,26 @@ pub = Publication
   { authors = [("Joris","Sansen"), ("Gaëlle","Richer"), ("Timothée","Jourde"), ("Frédéric","Lalanne"), ("David","Auber"), ("Romain","Bourqui")]
   , title   = "Visual Exploration of Large Multidimensional Data Using Parallel Coordinates on Big Data Infrastructure"
   , journal = "Informatics"
-  , pubDate = "12 juillet 2017"
+  , pubDate = "12 July 2017"
   , pubUrl  = "www.mdpi.com/2227-9709/4/3/21" }
 
 bourqui = Reference
   { name = ("Romain","Bourqui")
-  , role = "Maître de conférence au LaBRI, équipe EVADoMe (LAboratoire Bordelais de Recherche en Informatique ; Exploration Visuelle et Analytique de DOnnées MassivEs)"
+  , role = "Associate professor at LaBRI, EVADoMe team (Bordeaux Laboratory for Computer Science Research ; Visual Analytics and Interactive Exploration of Massive Data)"
   , mail = "bourqui@labri.fr" }
 
 dialo = Reference
   { name = ("Gayo","Dialo")
-  , role = "Maître de conférence à l'ISPED, équipe ERIAS (Institut de Santé Publique, d'Épidémiologie et de Développement ; Equipe de Recherche en Informatique Appliquée à la Santé)"
+  , role = "Associate professor at ISPED, ERIAS team (Bordeaux School of Public Health ; Computer Research Applied to Health)"
   , mail = "gayo.diallo@u-bordeaux.fr" }
 
 gimbert = Reference
   { name = ("Hugo","Gimbert")
-  , role = "Chercheur CNRS au LaBRI"
+  , role = "CNRS researcher at LaBRI"
   , mail = "hugo.gimbert@labri.fr" }
 
 fijalkow = Reference
   { name = ("Nathanaël","Fijalkow")
-  , role = "Chercheur CNRS au LaBRI"
+  , role = "CNRS researcher at LaBRI"
   , mail = "nathanael.fijalkow@labri.fr" }
   
