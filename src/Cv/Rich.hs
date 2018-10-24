@@ -24,13 +24,11 @@ data Ref = forall a . (Eq a, Typeable a) => Ref a
 instance Eq Ref where
   (Ref a) == (Ref b) = cast a == Just b
 
-instance Monoid Rich where
-  mappend (Rich (xs :|> (Str x))) (Rich ((Str y) :<| ys)) =
+instance Semigroup Rich where
+  (Rich (xs :|> (Str x))) <> (Rich ((Str y) :<| ys)) =
     Rich $ (xs :|> Str (x ++ y)) <> ys
 
-  mappend (Rich xs) (Rich ys) = Rich $ xs <> ys
-
-  mempty = Rich mempty
+  (Rich xs) <> (Rich ys) = Rich $ xs <> ys
 
 (?) :: (Eq a, Eq b, Typeable a, Typeable b) => a -> b -> Rich
 a ? b = toRich a <> toRich b

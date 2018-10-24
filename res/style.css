@@ -89,6 +89,10 @@ p.leaf
 {
     margin-right: 0;
 }
+.horizontal > li
+{
+    white-space: nowrap;
+}
 
 .lastname
 {
