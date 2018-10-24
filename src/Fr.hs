@@ -27,7 +27,7 @@ fr = Cv
     [ Position
       { period      = ("juin - juillet","2018")
       , keywords    = ["Haskell", "AI"]
-      , description = "Stage de première année de Master au LaBRI, équipe Méthodes Formelles : conception et réalisation d'un programme-joueur de Mastermind paramétrique. Supervisé par " ? gimbert ? " et " ? fijalkow ? "."
+      , description = "Stage de première année de Master au LaBRI, équipe Méthodes Formelles : conception et réalisation d'un programme-joueur de Mastermind paramétrique. Supervisé par " ? gimbert ? " et " ? fijalkow ? "."
       , posUrl      = "github.com/timjrd/mastermind" }
 
     , Position
@@ -39,13 +39,13 @@ fr = Cv
     , Position
       { period      = ("mars - août","2016")
       , keywords    = ["Java", "Lucene", "GWT", "Data mining", "Web sémantique"]
-      , description = "Poste de développeur à l'ISPED, équipe ERIAS : développement d'un système d'analyse de forums en ligne afin de détecter des mésusages de médicaments par la population, avec une application web de visualisation. Supervisé par " ? dialo ? "."
+      , description = "Poste de développeur à l'ISPED, équipe ERIAS : développement d'un système d'analyse de forums en ligne afin de détecter des mésusages de médicaments par la population, avec une application web de visualisation. Supervisé par " ? dialo ? "."
       , posUrl      = "" }
         
     , Position
       { period      = ("avril - mai","2015")
       , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Spark", "Big data"]
-      , description = "Stage de DUT au LaBRI, équipe EVADoMe : réalisation d'une application de visualisation de données massives basée sur les coordonnées parallèles avec un back-end sur infrastructure distribuée. Supervisé par " ? bourqui ? ". Ce travail a servi de base à une publication " ? pub ? "."
+      , description = "Stage de DUT au LaBRI, équipe EVADoMe : réalisation d'une application de visualisation de données massives, basée sur les coordonnées parallèles, avec un back-end sur infrastructure distribuée. Supervisé par " ? bourqui ? ". Ce travail a servi de base à une publication " ? pub ? "."
       , posUrl      = "" } ]
 
   , backgrounds =
@@ -79,11 +79,11 @@ fr = Cv
   , skills =
     [[ Skill
        { skill   = "Haskell"
-       , details = "Grand intêret. Principalement focalisé sur ce langage. Plusieurs projets réalisés. Expérience de stage. Bonne maîtrise du langage de base. Approfondissements réguliers." }
+       , details = "Grand intérêt. Principalement focalisé sur ce langage. Plusieurs projets réalisés. Expérience de stage. Bonne maîtrise du langage de base. Approfondissements réguliers." }
 
      , Skill
        { skill   = "C++"
-       , details = "Intêret. Plusieurs projets. Expérience de stage. Bonne maîtrise." }
+       , details = "Intérêt. Plusieurs projets. Expérience de stage. Bonne maîtrise." }
 
      , Skill
        { skill   = "Java"
@@ -95,7 +95,7 @@ fr = Cv
       
      , Skill
        { skill   = "Scala"
-       , details = "Grand intêret. Expérience professionnelle. Maîtrise correct." } ]
+       , details = "Grand intérêt. Expérience professionnelle. Maîtrise correcte." } ]
 
     ,[ Skill
        { skill   = "GNU/Linux"
@@ -103,7 +103,7 @@ fr = Cv
     
      , Skill
        { skill   = "Nix/NixOS"
-       , details = "Grand intêret et utilisation quotidienne. Maîtrise correct." }
+       , details = "Grand intérêt et utilisation quotidienne. Maîtrise correcte." }
 
      , Skill
        { skill   = "Git"
@@ -111,11 +111,11 @@ fr = Cv
 
     ,[ Skill
        { skill   = "CSS3"
-       , details = "Intêret. Plusieurs projets. Bonne maîtrise." }
+       , details = "Intérêt. Plusieurs projets. Bonne maîtrise." }
 
      , Skill
        { skill   = "XHTML5"
-       , details = "Maîtrise correct." } ]
+       , details = "Maîtrise correcte." } ]
 
     ,[ Skill
        { skill   = []

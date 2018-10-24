@@ -56,7 +56,7 @@ body
 }
 .columns.shrink > *, body
 {
-    min-width: 12cm;
+    min-width: 13.5cm;
 }
 .columns.shrink > *
 {
@@ -79,7 +79,6 @@ p.leaf
 .horizontal
 {
     display: flex;
-    flex-wrap: wrap;
     align-items: start;
 }
 .horizontal > *
@@ -116,18 +115,21 @@ tr > *:last-child
 {
     border-right: none;
 }
+
 table
 {
     position: relative;
 }
-tr.space:after
+.space
 {
-    content: "";
     position: absolute;
     left: 50%;
-    transform: translate(-50%) scaleY(0.33);
+    
     width: 1cm;
-    border-top: 1px solid rgb(153,0,0);;
+    
+    transform: translate(-50%) scaleY(0.33);
+    
+    border-top: 1px solid rgb(153,0,0);
 }
 
 section > *
@@ -148,7 +150,7 @@ nav > *:after
 {
     content: "●";
     font-size: 50%;
-    margin: 0 0.1cm;
+    margin: 0 0.2cm;
 }
 nav > *:last-child:after
 {
@@ -255,7 +257,7 @@ h3
     }
     body
     {
-	zoom: 72.5%;
+	zoom: 69.9%;
 	margin: 1.5cm;
     }
     nav
@@ -265,5 +267,10 @@ h3
     .web
     {
 	display: block;
+    }
+    img
+    {
+	position: relative;
+	top: 0.4ch;
     }
 }

@@ -27,7 +27,7 @@ en = Cv
     [ Position
       { period      = ("June - July","2018")
       , keywords    = ["Haskell", "AI"]
-      , description = "Internship at LaBRI, Formal Methods team (master's degree, first year): design and implementation of a parametric Mastermind computer player. Supervised by " ? gimbert ? " and " ? fijalkow ? "."
+      , description = "Internship at LaBRI, Formal Methods team (master's degree, first year): design and implementation of a parametric Mastermind computer player. Supervised by " ? gimbert ? " and " ? fijalkow ? "."
       , posUrl      = "github.com/timjrd/mastermind" }
 
     , Position
@@ -39,13 +39,13 @@ en = Cv
     , Position
       { period      = ("March - August","2016")
       , keywords    = ["Java", "Lucene", "GWT", "Data mining", "Semantic Web"]
-      , description = "Software developer position at ISPED, ERIAS team: development of an online forums analysis system targeted at spotting medications misuses by the population, with a web visualization application. Supervised by " ? dialo ? "."
+      , description = "Software developer position at ISPED, ERIAS team: development of an online forums analysis system targeted at spotting medications misuses by the population, with a web visualization application. Supervised by " ? dialo ? "."
       , posUrl      = "" }
         
     , Position
       { period      = ("April - May","2015")
       , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Spark", "Big data"]
-      , description = "Internship at LaBRI, EVADoMe team (technical degree): implementation of a massive data visualization application based on parallel coordinates, with a distributed backend infrastructure. Supervised by " ? bourqui ? ". This work has provided the basis for a publication " ? pub ? "."
+      , description = "Internship at LaBRI, EVADoMe team (technical degree): implementation of a massive data visualization application based on parallel coordinates, with a distributed backend infrastructure. Supervised by " ? bourqui ? ". This work has provided the basis for a publication " ? pub ? "."
       , posUrl      = "" } ]
 
   , backgrounds =

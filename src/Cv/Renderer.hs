@@ -45,7 +45,7 @@ renderCv pdfPrefix f cv cvs = renderHtml $ do
   H.html ! A.lang (toValue $ lang cv) $ do
     H.head $ do
       H.meta ! A.charset "utf-8"
-      H.meta ! A.name "viewport" ! A.content "width=540"
+      H.meta ! A.name "viewport" ! A.content "width=530"
       H.link ! A.rel "stylesheet" ! A.href "../res/style.prefix.min.css"
       H.title $ toHtml $ author cv
     H.body $ f pdfPrefix cv cvs
@@ -132,7 +132,7 @@ languagesH cv = H.section .! leaf $ do
   H.table $ mapM_ f $ languages cv
   where
     f x = H.tr $ do
-      H.th $ toHtml $ language x
+      if null (language x) then mempty else H.th $ toHtml $ language x
       H.td $ toHtml $ status x
 
 skillsH :: Cv -> Html
@@ -146,7 +146,7 @@ skillsH cv = H.section .! leaf $ do
     f x = H.tr $ do
       H.th $ toHtml $ skill x
       H.td $ toHtml $ details x
-    trspace = H.tr .! space $ mempty
+    trspace = H.tr $ H.td mempty >> H.td (space .$ mempty)
 
 referencesH :: Cv -> Html  
 referencesH cv = H.section .! leaf $ do
@@ -173,10 +173,12 @@ instance IsString Class where
   fromString x = Class [x]
 
 mailto :: String -> Html
-mailto x = H.a ! A.href (toValue $ "mailto:" ++ x) $ toHtml x
+mailto [] = mempty
+mailto x  = H.a ! A.href (toValue $ "mailto:" ++ x) $ toHtml x
 
 http :: String -> Html
-http x = H.a ! A.href (toValue $ "https://" ++ x) $ toHtml x
+http [] = mempty
+http x  = H.a ! A.href (toValue $ "https://" ++ x) $ toHtml x
 
 horizontal = "horizontal" :: Class
 columns    = "columns"    :: Class
