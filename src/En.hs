@@ -19,9 +19,9 @@ en = Cv
   , email         = "timothee.jourde@u-bordeaux.fr"
   , website       = "timjrd.github.io/cv"
   , phone         = "+33 6 79 50 56 22"
-  , age           = "twenty-three"
+  , age           = "twenty-four"
 
-  , introduction  = "Fond of computer science and autodidact, I'm looking for a final year internship starting on April 2019. I'm mainly focused on functional programming."
+  , introduction  = "Fond of computer science and autodidact, I'm looking for a final year internship starting on April 2019."
   
   , positions =
     [ Position

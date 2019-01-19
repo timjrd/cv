@@ -71,9 +71,10 @@ body
 {
     border: 0.5cm solid transparent;
 }
-p.leaf
+.columns.shrink > p.leaf
 {
     text-align: center;
+    max-width: none;
 }
 
 .horizontal

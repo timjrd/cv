@@ -19,9 +19,9 @@ fr = Cv
   , email         = "timothee.jourde@u-bordeaux.fr"
   , website       = "timjrd.github.io/cv"
   , phone         = "+33 6 79 50 56 22"
-  , age           = "23 ans"
+  , age           = "24 ans"
 
-  , introduction  = "Passionné et autodidacte, je suis à la recherche d'un stage de fin d'études à partir d'avril 2019. Je suis principalement focalisé sur la programmation fonctionnelle."
+  , introduction  = "Passionné et autodidacte, je suis à la recherche d'un stage de fin d'études à partir d'avril 2019."
   
   , positions =
     [ Position
