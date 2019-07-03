@@ -58,12 +58,13 @@ compactLayout pdfPrefix cv cvs = do
   columns .& shrink .$ do
     H.div $ do
       positionsH    cv
-      skillsH       cv
-    H.div $ do
       backgroundsH  cv
       publicationsH cv
+    H.div $ do
+      skillsH       cv
       languagesH    cv
-      referencesH   cv      
+      hobbiesH      cv
+      referencesH   cv
 
 navH :: String -> Cv -> [Cv] -> Html
 navH pdfPrefix cv cvs = columns .$ H.nav .! leaf $ pdf cv >> mapM_ htm (delete cv cvs)
@@ -81,9 +82,10 @@ headerH cv = H.header .! columns $ horizontal .& leaf .$ do
     horizontal .$ do
       H.div $ do
         mailto $ email cv
-        web .$ http $ website cv
+        mapM_ (\x -> web .$ http x) $ website cv
+      H.div $ do
         H.div $ toHtml $ phone cv
-      H.div $ toHtml $ age cv
+        H.div $ toHtml $ age   cv
 
 introductionH :: Cv -> Html
 introductionH cv = columns .& shrink .$ H.p .! leaf $ toHtml $ introduction cv
@@ -97,7 +99,7 @@ positionsH cv = H.section .! leaf $ do
       H.th $ let (a,b) = period x in toHtml a >> H.br >> toHtml b
       H.td $ do
         H.ul .! horizontal $ mapM_ (H.li . toHtml) $ keywords x
-        H.p $ (foldRich' cv $ description x) >> " " >> (http $ posUrl x)
+        H.p $ (foldRich' cv $ description x) >> H.br >> (http $ posUrl x)
 
 backgroundsH :: Cv -> Html
 backgroundsH cv = H.section .! leaf $ do
@@ -123,7 +125,7 @@ publicationsH cv = H.section .! leaf $ do
         ". "
         "“" >> toHtml (title x) >> "”. "
         H.em (toHtml $ journal x) >> ". "
-        H.em (toHtml $ pubDate x) >> ". "
+        H.em (toHtml $ pubDate x) >> "." >> H.br
         http $ pubUrl x
 
 languagesH :: Cv -> Html  
@@ -134,6 +136,15 @@ languagesH cv = H.section .! leaf $ do
     f x = H.tr $ do
       if null (language x) then mempty else H.th $ toHtml $ language x
       H.td $ toHtml $ status x
+
+hobbiesH :: Cv -> Html  
+hobbiesH cv = H.section .! leaf $ do
+  H.h3 $ toHtml $ hHobbies cv
+  H.table $ mapM_ f $ hobbies cv
+  where
+    f x = H.tr $ do
+      H.th $ toHtml $ hobby x
+      H.td $ toHtml $ hobbyDetails x
 
 skillsH :: Cv -> Html
 skillsH cv = H.section .! leaf $ do
@@ -157,7 +168,7 @@ referencesH cv = H.section .! leaf $ do
       H.th $ label cv x
       H.td $ do
         nameH  (name x) >> ". "
-        toHtml (role x) >> ". "
+        toHtml (role x) >> "." >> H.br
         mailto $ mail x
 
 nameH :: (String,String) -> Html

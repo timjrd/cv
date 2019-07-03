@@ -58,13 +58,13 @@ let
         sha1 = "0bd76704258be829b2398bb50e4b62d1a166b0b9";
       };
     };
-    "caniuse-db-1.0.30000890" = {
+    "caniuse-db-1.0.30000978" = {
       name = "caniuse-db";
       packageName = "caniuse-db";
-      version = "1.0.30000890";
+      version = "1.0.30000978";
       src = fetchurl {
-        url = "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000890.tgz";
-        sha512 = "aO5uw1Taw8GkNMMXIWOz/WJz3y6tR1ETUAdH/pvO5EoJ3I1Po9vNJd9aMjY1GKucS/OXWMiQbXRbk3O1sgCbRA==";
+        url = "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000978.tgz";
+        sha512 = "UTzb0WomXxeqhAn3HgygItnkQeiLujN/O4D6hhB4ccSgktBysAbO/duUBJiNsPyxn/DsV8OnIn45jNeuvmUcPQ==";
       };
     };
     "chalk-1.1.3" = {
@@ -72,7 +72,7 @@ let
       packageName = "chalk";
       version = "1.1.3";
       src = fetchurl {
-        url = "http://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz";
+        url = "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz";
         sha1 = "a8115c55e4a702fe4d150abd3872822a7e09fc98";
       };
     };
@@ -85,13 +85,13 @@ let
         sha512 = "4ZxI6dy4lrY6FHzfiy1aEOXgu4LIsW2MhwG0VBKdcoGoH/XLFgaHSdLTGr4O8Be6A8r3MOphEiI8Gc1n0ecf3g==";
       };
     };
-    "commander-2.19.0" = {
+    "commander-2.20.0" = {
       name = "commander";
       packageName = "commander";
-      version = "2.19.0";
+      version = "2.20.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/commander/-/commander-2.19.0.tgz";
-        sha512 = "6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==";
+        url = "https://registry.npmjs.org/commander/-/commander-2.20.0.tgz";
+        sha512 = "7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==";
       };
     };
     "concat-map-0.0.1" = {
@@ -103,13 +103,13 @@ let
         sha1 = "d8a96bd77fd68df7793a73036a3ba0d5405d477b";
       };
     };
-    "electron-to-chromium-1.3.79" = {
+    "electron-to-chromium-1.3.179" = {
       name = "electron-to-chromium";
       packageName = "electron-to-chromium";
-      version = "1.3.79";
+      version = "1.3.179";
       src = fetchurl {
-        url = "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.79.tgz";
-        sha512 = "LQdY3j4PxuUl6xfxiFruTSlCniTrTrzAd8/HfsLEMi0PUpaQ0Iy+Pr4N4VllDYjs0Hyu2lkTbvzqlG+PX9NsNw==";
+        url = "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.179.tgz";
+        sha512 = "hRjlOdKImgIRicKYRY6hHbUMrX2NJYBrIusTepwPt/apcabuzrzhXpkkWu7elWdTZEQwKV6BfX8EvWIBWLCNQw==";
       };
     };
     "escape-string-regexp-1.0.5" = {
@@ -139,22 +139,22 @@ let
         sha1 = "1504ad2523158caa40db4a2787cb01411994ea4f";
       };
     };
-    "glob-7.1.3" = {
+    "glob-7.1.4" = {
       name = "glob";
       packageName = "glob";
-      version = "7.1.3";
+      version = "7.1.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/glob/-/glob-7.1.3.tgz";
-        sha512 = "vcfuiIxogLV4DlGBHIUOwI0IbrJ8HWPc4MU7HzviGeNho/UJDfi6B5p3sHeWIQ0KGIU0Jpxi5ZHxemQfLkkAwQ==";
+        url = "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz";
+        sha512 = "hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==";
       };
     };
-    "graceful-fs-4.1.11" = {
+    "graceful-fs-4.2.0" = {
       name = "graceful-fs";
       packageName = "graceful-fs";
-      version = "4.1.11";
+      version = "4.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.11.tgz";
-        sha1 = "0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658";
+        url = "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.0.tgz";
+        sha512 = "jpSvDPV4Cq/bgtpndIWbI5hmYxhQGHPC4d4cqBPb4DLniCfhJokdXhwhaDuLBGLQdvvRum/UiX6ECVIPvDXqdg==";
       };
     };
     "has-ansi-2.0.0" = {
@@ -184,22 +184,22 @@ let
         sha1 = "49bd6331d7d02d0c09bc910a1075ba8165b56df9";
       };
     };
-    "inherits-2.0.3" = {
+    "inherits-2.0.4" = {
       name = "inherits";
       packageName = "inherits";
-      version = "2.0.3";
+      version = "2.0.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz";
-        sha1 = "633c2c83e3da42a502f52466022480f4208261de";
+        url = "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz";
+        sha512 = "k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==";
       };
     };
-    "js-base64-2.4.9" = {
+    "js-base64-2.5.1" = {
       name = "js-base64";
       packageName = "js-base64";
-      version = "2.4.9";
+      version = "2.5.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/js-base64/-/js-base64-2.4.9.tgz";
-        sha512 = "xcinL3AuDJk7VSzsHgb9DvvIXayBbadtMZ4HFPx8rUszbW1MuNMlwYVC4zzCZ6e1sqZpnNS5ZFYOhXqA39T7LQ==";
+        url = "https://registry.npmjs.org/js-base64/-/js-base64-2.5.1.tgz";
+        sha512 = "M7kLczedRMYX4L8Mdh4MzyAMM9O5osx+4FcOQuTvr3A9F2D9S5JXheN0ewNbrvK2UatkTRhL5ejGmGSjNMiZuw==";
       };
     };
     "jsonfile-2.4.0" = {
@@ -207,7 +207,7 @@ let
       packageName = "jsonfile";
       version = "2.4.0";
       src = fetchurl {
-        url = "http://registry.npmjs.org/jsonfile/-/jsonfile-2.4.0.tgz";
+        url = "https://registry.npmjs.org/jsonfile/-/jsonfile-2.4.0.tgz";
         sha1 = "3736a2b428b87bbda0cc83b53fa3d633a35c2ae8";
       };
     };
@@ -274,13 +274,13 @@ let
         sha512 = "pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==";
       };
     };
-    "rimraf-2.6.2" = {
+    "rimraf-2.6.3" = {
       name = "rimraf";
       packageName = "rimraf";
-      version = "2.6.2";
+      version = "2.6.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz";
-        sha512 = "lreewLK/BlghmxtfH36YYVg1i8IAce4TI7oao75I1g245+6BctqTVQiBP3YUJ9C6DQOXJmkYR9X9fCLtCOJc5w==";
+        url = "https://registry.npmjs.org/rimraf/-/rimraf-2.6.3.tgz";
+        sha512 = "mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==";
       };
     };
     "source-map-0.5.7" = {
@@ -306,7 +306,7 @@ let
       packageName = "strip-ansi";
       version = "3.0.1";
       src = fetchurl {
-        url = "http://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz";
+        url = "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz";
         sha1 = "6a385fb8853d952d5ff05d0e8aaf94278dc63dcf";
       };
     };
@@ -355,24 +355,24 @@ in
       sources."balanced-match-1.0.0"
       sources."brace-expansion-1.1.11"
       sources."browserslist-1.7.7"
-      sources."caniuse-db-1.0.30000890"
+      sources."caniuse-db-1.0.30000978"
       (sources."chalk-1.1.3" // {
         dependencies = [
           sources."supports-color-2.0.0"
         ];
       })
       sources."concat-map-0.0.1"
-      sources."electron-to-chromium-1.3.79"
+      sources."electron-to-chromium-1.3.179"
       sources."escape-string-regexp-1.0.5"
       sources."fs-extra-0.24.0"
       sources."fs.realpath-1.0.0"
-      sources."glob-7.1.3"
-      sources."graceful-fs-4.1.11"
+      sources."glob-7.1.4"
+      sources."graceful-fs-4.2.0"
       sources."has-ansi-2.0.0"
       sources."has-flag-1.0.0"
       sources."inflight-1.0.6"
-      sources."inherits-2.0.3"
-      sources."js-base64-2.4.9"
+      sources."inherits-2.0.4"
+      sources."js-base64-2.5.1"
       sources."jsonfile-2.4.0"
       sources."minimatch-3.0.4"
       sources."normalize-range-0.1.2"
@@ -381,7 +381,7 @@ in
       sources."path-is-absolute-1.0.1"
       sources."postcss-5.2.18"
       sources."postcss-value-parser-3.3.1"
-      sources."rimraf-2.6.2"
+      sources."rimraf-2.6.3"
       sources."source-map-0.5.7"
       sources."strip-ansi-3.0.1"
       sources."supports-color-3.2.3"
@@ -394,26 +394,26 @@ in
       license = "MIT";
     };
     production = true;
-    bypassCache = false;
+    bypassCache = true;
   };
   clean-css-cli = nodeEnv.buildNodePackage {
     name = "clean-css-cli";
     packageName = "clean-css-cli";
-    version = "4.2.1";
+    version = "4.3.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/clean-css-cli/-/clean-css-cli-4.2.1.tgz";
-      sha512 = "ST2yi9F2kAmLRs9phSpGRUm44SbRy29QGm1OuAKfTU0KCLilFMTcz+/Fxhbdi5GrsjIMhTBdFUQhc55CjM3Isw==";
+      url = "https://registry.npmjs.org/clean-css-cli/-/clean-css-cli-4.3.0.tgz";
+      sha512 = "8GHZfr+mG3zB/Lgqrr27qHBFsPSn0fyEI3f2rIZpxPxUbn2J6A8xyyeBRVTW8duDuXigN0s80vsXiXJOEFIO5Q==";
     };
     dependencies = [
       sources."balanced-match-1.0.0"
       sources."brace-expansion-1.1.11"
       sources."clean-css-4.2.1"
-      sources."commander-2.19.0"
+      sources."commander-2.20.0"
       sources."concat-map-0.0.1"
       sources."fs.realpath-1.0.0"
-      sources."glob-7.1.3"
+      sources."glob-7.1.4"
       sources."inflight-1.0.6"
-      sources."inherits-2.0.3"
+      sources."inherits-2.0.4"
       sources."minimatch-3.0.4"
       sources."once-1.4.0"
       sources."path-is-absolute-1.0.1"
@@ -427,6 +427,6 @@ in
       license = "MIT";
     };
     production = true;
-    bypassCache = false;
+    bypassCache = true;
   };
 }

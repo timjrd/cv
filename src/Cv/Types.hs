@@ -1,7 +1,6 @@
 module Cv.Types where
 
 import Data.Typeable
--- import Data.String
 import Data.List
 
 import Cv.Rich
@@ -15,11 +14,12 @@ data Cv = Cv { lang          :: String
              , hLanguages    :: String
              , hSkills       :: String
              , hReferences   :: String
+             , hHobbies      :: String
              
              , author        :: String
              , occupation    :: String
              , email         :: String
-             , website       :: String
+             , website       :: [String]
              , phone         :: String
              , age           :: String
              
@@ -29,7 +29,8 @@ data Cv = Cv { lang          :: String
              , publications  :: [Publication]
              , languages     :: [Language]
              , skills        :: [[Skill]]
-             , references    :: [Reference] }
+             , references    :: [Reference]
+             , hobbies       :: [Hobby] }
   deriving Eq
 
 data Position = Position { period      :: (String,String)
@@ -61,6 +62,10 @@ data Reference = Reference { name :: (String,String)
                            , role :: String
                            , mail :: String }
   deriving (Eq, Typeable)
+
+data Hobby = Hobby { hobby        :: String
+                   , hobbyDetails :: String }
+  deriving Eq
 
 preprocess :: Cv -> Cv
 preprocess cv = cv { publications = pubs'

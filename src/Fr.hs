@@ -13,40 +13,47 @@ fr = Cv
   , hLanguages    = "Anglais"
   , hSkills       = "Compétences"
   , hReferences   = "Références"
+  , hHobbies      = "Loisirs"
 
   , author        = "Timothée Jourde"
   , occupation    = "Étudiant en Master Informatique"
   , email         = "timothee.jourde@u-bordeaux.fr"
-  , website       = "timjrd.github.io/cv"
+  , website       = ["timjrd.github.io/cv", "github.com/timjrd"]
   , phone         = "+33 6 79 50 56 22"
   , age           = "24 ans"
 
-  , introduction  = "Passionné et autodidacte, je suis à la recherche d'un stage de fin d'études à partir d'avril 2019."
+  , introduction  = "Passionné et autodidacte, je suis actuellement en stage de fin d'études de Master Informatique. Avec une première expérience professionnelle, plusieurs stages, et des compétences spécifiques en algorithmique, programmation fonctionnelle, génie logiciel, visualisation de données, et développement web, je recherche un emploi à partir d'octobre 2019."
   
   , positions =
     [ Position
+      { period      = ("actuellement","avril 2019")
+      , keywords    = ["C++", "Python", "Gurobi", "Optimisation linéaire", "Bio-informatique"]
+      , description = "Stage de fin d'études de Master au LaBRI, équipe Biologie Computationnelle : implémentation puis évaluation et amélioration d'un programme permettant d'identifier parmi l'ensemble des souches connues d'une bactérie lesquelles sont présentent dans un échantillon et en quelles quantités. Le matériel génétique de l'échantillon étant séquencé avec une méthode haut débit. Supervisé par " ? chauve ? "."
+      , posUrl      = [] }
+      
+    , Position
       { period      = ("juin - juillet","2018")
       , keywords    = ["Haskell", "AI"]
-      , description = "Stage de première année de Master au LaBRI, équipe Méthodes Formelles : conception et réalisation d'un programme-joueur de Mastermind paramétrique. Supervisé par " ? gimbert ? " et " ? fijalkow ? "."
+      , description = "Stage de première année de Master au LaBRI, équipe Méthodes Formelles : conception et réalisation d'un programme-joueur de Mastermind paramétrique. Supervisé par " ? fijalkow ? "."
       , posUrl      = "github.com/timjrd/mastermind" }
 
     , Position
       { period      = ("juin - juillet","2017")
       , keywords    = ["Scala", "Scala.js", "D3.js"]
       , description = toRich "Poste de développeur à l'ISPED, équipe ERIAS : poursuite du projet précédent en collaboration avec le LaBRI (voir ci-dessous)."
-      , posUrl      = "" }
+      , posUrl      = [] }
         
     , Position
       { period      = ("mars - août","2016")
       , keywords    = ["Java", "Lucene", "GWT", "Data mining", "Web sémantique"]
-      , description = "Poste de développeur à l'ISPED, équipe ERIAS : développement d'un système d'analyse de forums en ligne afin de détecter des mésusages de médicaments par la population, avec une application web de visualisation. Supervisé par " ? dialo ? "."
-      , posUrl      = "" }
+      , description = "Poste de développeur à l'ISPED, équipe ERIAS : développement d'un système d'analyse de forums en ligne afin de détecter des mésusages de médicaments par la population, avec une application web de visualisation. Supervisé par " ? dialo ? "."
+      , posUrl      = [] }
         
     , Position
       { period      = ("avril - mai","2015")
       , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Spark", "Big data"]
-      , description = "Stage de DUT au LaBRI, équipe EVADoMe : réalisation d'une application de visualisation de données massives, basée sur les coordonnées parallèles, avec un back-end sur infrastructure distribuée. Supervisé par " ? bourqui ? ". Ce travail a servi de base à une publication " ? pub ? "."
-      , posUrl      = "" } ]
+      , description = "Stage de DUT au LaBRI, équipe EVADoMe : réalisation d'une application de visualisation de données massives, basée sur les coordonnées parallèles, avec un back-end sur infrastructure distribuée. Supervisé par " ? bourqui ? ". Ce travail a servi de base à une publication " ? pub ? "."
+      , posUrl      = [] } ]
 
   , backgrounds =
     [ Background
@@ -69,7 +76,7 @@ fr = Cv
       { date        = "2013"
       , designation = "BAC S spécialité Mathématiques." } ]
   
-  , publications = []
+  , publications = [pub]
 
   , languages =
     [ Language
@@ -79,7 +86,7 @@ fr = Cv
   , skills =
     [[ Skill
        { skill   = "Haskell"
-       , details = "Grand intérêt. Principalement focalisé sur ce langage. Plusieurs projets réalisés. Expérience de stage. Bonne maîtrise du langage de base. Approfondissements réguliers." }
+       , details = "Grand intérêt. Plusieurs projets réalisés. Expérience de stage. Bonne maîtrise du langage de base." }
 
      , Skill
        { skill   = "C++"
@@ -91,12 +98,24 @@ fr = Cv
         
      , Skill
        { skill   = "C"
-       , details = "Plusieurs projets. Maîtrise correct." }
+       , details = "Plusieurs projets. Maîtrise correcte." }
       
      , Skill
        { skill   = "Scala"
-       , details = "Grand intérêt. Expérience professionnelle. Maîtrise correcte." } ]
+       , details = "Grand intérêt. Expérience professionnelle. Maîtrise correcte." }
 
+     , Skill
+       { skill   = "Python"
+       , details = "Expérience de stage. Maîtrise correcte." }
+     
+     , Skill
+       { skill   = "Rust"
+       , details = "Grand intérêt. Notions." }
+
+     , Skill
+       { skill   = "JavaScript"
+       , details = "Notions." } ]
+    
     ,[ Skill
        { skill   = "GNU/Linux"
        , details = "Bonne connaissance et utilisation quotidienne." }
@@ -121,8 +140,20 @@ fr = Cv
        { skill   = []
        , details = "Adepte du logiciel libre. Curieux, culture approfondie en informatique." } ]]
 
-  , references = [bourqui, dialo, gimbert, fijalkow]
-  }
+  , hobbies =
+    [ Hobby
+      { hobby = "Musique"
+      , hobbyDetails = "batterie, piano, MAO, musique algorithmique" }
+
+    , Hobby
+      { hobby = "Ski alpin"
+      , hobbyDetails = "bon niveau" }
+
+    , Hobby
+      { hobby = "Photographie"
+      , hobbyDetails = "macro, pose longue" } ]
+  
+  , references = [chauve, fijalkow, dialo, bourqui] }
 
 pub = Publication
   { authors = [("Joris","Sansen"), ("Gaëlle","Richer"), ("Timothée","Jourde"), ("Frédéric","Lalanne"), ("David","Auber"), ("Romain","Bourqui")]
@@ -131,23 +162,22 @@ pub = Publication
   , pubDate = "12 juillet 2017"
   , pubUrl  = "www.mdpi.com/2227-9709/4/3/21" }
 
-bourqui = Reference
-  { name = ("Romain","Bourqui")
-  , role = "Maître de conférence au LaBRI, équipe EVADoMe (LAboratoire Bordelais de Recherche en Informatique ; Exploration Visuelle et Analytique de DOnnées MassivEs)"
-  , mail = "bourqui@labri.fr" }
-
-dialo = Reference
-  { name = ("Gayo","Dialo")
-  , role = "Maître de conférence à l'ISPED, équipe ERIAS (Institut de Santé Publique, d'Épidémiologie et de Développement ; Equipe de Recherche en Informatique Appliquée à la Santé)"
-  , mail = "gayo.diallo@u-bordeaux.fr" }
-
-gimbert = Reference
-  { name = ("Hugo","Gimbert")
-  , role = "Chercheur CNRS au LaBRI"
-  , mail = "hugo.gimbert@labri.fr" }
+chauve = Reference
+  { name = ("Cedric","Chauve")
+  , role = "Professeur au Département de Mathématiques de l'Université Simon Fraser"
+  , mail = "cedric.chauve@sfu.ca" }
 
 fijalkow = Reference
   { name = ("Nathanaël","Fijalkow")
-  , role = "Chercheur CNRS au LaBRI"
+  , role = "Chercheur CNRS au LaBRI (LAboratoire Bordelais de Recherche en Informatique), équipe Méthodes Formelles"
   , mail = "nathanael.fijalkow@labri.fr" }
   
+dialo = Reference
+  { name = ("Gayo","Dialo")
+  , role = "Maître de conférence à l'ISPED, équipe ERIAS (Institut de Santé Publique, d'Épidémiologie et de Développement ; Équipe de Recherche en Informatique Appliquée à la Santé)"
+  , mail = "gayo.diallo@u-bordeaux.fr" }
+
+bourqui = Reference
+  { name = ("Romain","Bourqui")
+  , role = "Maître de conférence au LaBRI, équipe EVADoMe (Exploration Visuelle et Analytique de DOnnées MassivEs)"
+  , mail = "bourqui@labri.fr" }

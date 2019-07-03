@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-node2nix -i <(echo '["autoprefixer-cli", "clean-css-cli"]')
+node2nix -8 -i <(echo '["autoprefixer-cli", "clean-css-cli"]')

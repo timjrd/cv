@@ -39,7 +39,7 @@ html, body, body *
 
 body
 {
-    margin: 0.5cm;
+    margin: 0.4cm;
 }
 
 .columns
@@ -69,12 +69,12 @@ body
 
 .leaf
 {
-    border: 0.5cm solid transparent;
+    border: 0.4cm solid transparent;
 }
 .columns.shrink > p.leaf
 {
-    text-align: center;
-    max-width: none;
+    text-align: justify;
+    max-width: 22.1cm;
 }
 
 .horizontal
@@ -84,7 +84,7 @@ body
 }
 .horizontal > *
 {
-    margin-right: 0.5cm;
+    margin-right: 0.4cm;
 }
 .horizontal > *:last-child
 {
@@ -93,6 +93,7 @@ body
 .horizontal > li
 {
     white-space: nowrap;
+    font-size: 90%;
 }
 
 .lastname
@@ -102,7 +103,7 @@ body
 
 tr > *
 {
-    border: 0.3cm solid transparent; 
+    border: 0.25cm solid transparent; 
 }
 tr:first-child > *
 {
@@ -139,7 +140,7 @@ table
 
 section > *
 {
-    margin: 0 auto 0.5cm auto;
+    margin: 0 auto 0.4cm auto;
 }
 section > *:last-child
 {
@@ -162,11 +163,6 @@ nav > *:last-child:after
     display: none;
 }
 
-.web
-{
-    display: none;
-}
-
 header a
 {
     display: block;
@@ -181,6 +177,9 @@ img
     width: 3cm;
     height: 3cm;
     border-radius: 3cm;
+    
+    position: relative;
+    top: 0.4ch;    
 }
 
 span.ref
@@ -247,7 +246,7 @@ h1
 }
 h3
 {
-    margin-bottom: 0.5cm;
+    margin-bottom: 0.4cm;
     font-weight: bold;
 
     text-align: center;
@@ -263,19 +262,10 @@ h3
     body
     {
 	zoom: 69.9%;
-	margin: 1.5cm;
+	margin: 1.45cm;
     }
     nav
     {
 	display: none;
-    }
-    .web
-    {
-	display: block;
-    }
-    img
-    {
-	position: relative;
-	top: 0.4ch;
     }
 }
