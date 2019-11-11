@@ -16,19 +16,19 @@ fr = Cv
   , hHobbies      = "Loisirs"
 
   , author        = "Timothée Jourde"
-  , occupation    = "Étudiant en Master Informatique"
-  , email         = "timothee.jourde@u-bordeaux.fr"
+  , occupation    = "Ingénieur logiciel"
+  , email         = "timjrd@netc.fr"
   , website       = ["timjrd.github.io/cv", "github.com/timjrd"]
   , phone         = "+33 6 79 50 56 22"
   , age           = "24 ans"
 
-  , introduction  = "Passionné et autodidacte, je suis actuellement en stage de fin d'études de Master Informatique. Avec une première expérience professionnelle, plusieurs stages, et des compétences spécifiques en algorithmique, programmation fonctionnelle, génie logiciel, visualisation de données, et développement web, je recherche un emploi à partir d'octobre 2019."
+  , introduction  = "Passionné et autodidacte, je suis titulaire d'un Master et d'un DUT en informatique. Mes différentes expériences m'ont amené à acquérir des compétences spécifiques en algorithmique, programmation fonctionnelle, génie logiciel, visualisation de données, et développement web."
   
   , positions =
     [ Position
-      { period      = ("actuellement","avril 2019")
+      { period      = ("avril - août","2019")
       , keywords    = ["C++", "Python", "Gurobi", "Optimisation linéaire", "Bio-informatique"]
-      , description = "Stage de fin d'études de Master au LaBRI, équipe Biologie Computationnelle : implémentation puis évaluation et amélioration d'un programme permettant d'identifier parmi l'ensemble des souches connues d'une bactérie lesquelles sont présentent dans un échantillon et en quelles quantités. Le matériel génétique de l'échantillon étant séquencé avec une méthode haut débit. Supervisé par " ? chauve ? "."
+      , description = "Stage de fin d'études de Master au LaBRI, équipe Biologie Computationnelle : implémentation puis évaluation et amélioration d'un programme d'analyse de séquences génétiques, dont l'objectif est d'identifier parmi l'ensemble des souches connues d'une bactérie, lesquelles sont présentes dans un échantillon et en quelles quantités. Le matériel génétique de l'échantillon étant séquencé avec une méthode haut débit. Supervisé par " ? chauve ? "."
       , posUrl      = [] }
       
     , Position
@@ -57,16 +57,12 @@ fr = Cv
 
   , backgrounds =
     [ Background
-      { date        = "actuellement"
-      , designation = "Deuxième année de Master Informatique à l'Université de Bordeaux, spécialité Génie Logiciel." }
-      
-    , Background
-      { date        = "2017 - 2018"
-      , designation = "Première année de Master Informatique à l'Université de Bordeaux." }
-
+      { date        = "2017 - 2019"
+      , designation = "Master Informatique à l'Université de Bordeaux, spécialité Génie Logiciel." }
+    
     , Background
       { date        = "2016 - 2017"
-      , designation = "Troisième année de Licence Informatique à l'Université de Bordeaux." }
+      , designation = "Licence Informatique à l'Université de Bordeaux (L3)." }
 
     , Background
       { date        = "2013 - 2015"
@@ -95,23 +91,23 @@ fr = Cv
      , Skill
        { skill   = "Java"
        , details = "Plusieurs projets. Expérience professionnelle. Bonne maîtrise." }
-        
-     , Skill
-       { skill   = "C"
-       , details = "Plusieurs projets. Maîtrise correcte." }
-      
+              
      , Skill
        { skill   = "Scala"
        , details = "Grand intérêt. Expérience professionnelle. Maîtrise correcte." }
 
      , Skill
+       { skill   = "Rust"
+       , details = "Grand intérêt. Maîtrise correcte." }
+
+     , Skill
+       { skill   = "C"
+       , details = "Plusieurs projets. Maîtrise correcte." }
+
+     , Skill
        { skill   = "Python"
        , details = "Expérience de stage. Maîtrise correcte." }
      
-     , Skill
-       { skill   = "Rust"
-       , details = "Grand intérêt. Notions." }
-
      , Skill
        { skill   = "JavaScript"
        , details = "Notions." } ]

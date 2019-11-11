@@ -16,19 +16,19 @@ en = Cv
   , hHobbies      = "Hobbies"  
 
   , author        = "Timothée Jourde"
-  , occupation    = "Computer Science Master's Student"
-  , email         = "timothee.jourde@u-bordeaux.fr"
+  , occupation    = "Software engineer"
+  , email         = "timjrd@netc.fr"
   , website       = ["timjrd.github.io/cv", "github.com/timjrd"]
   , phone         = "+33 6 79 50 56 22"
   , age           = "twenty-four"
 
-  , introduction  = "Fond of computer science and autodidact, I'm currently intern as part of the final year of my computer science master's degree. With a first professional experience, several internships done, and specific skills in algorithmics, functional programming, software engineering, data visualization, and web development, I'm looking for a job starting on October 2019."
+  , introduction  = "Fond of computer science and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences, I have acquired specific skills in algorithmics, functional programming, software engineering, data visualization, and web development."
   
   , positions =
     [ Position
-      { period      = ("currently","April 2019")
+      { period      = ("April - August","2019")
       , keywords    = ["C++", "Python", "Gurobi", "Linear optimization", "Bioinformatics"]
-      , description = "Final year internship at LaBRI, Computational Biology team (master's degree, second year): implementation, evaluation, and enhancement of a program capable of identifying among known strains of a bacterium which ones are present in a biological sample and in which quantities. The genetic material of the sample being sequenced with a high-throughput method. Supervised by " ? chauve ? "."
+      , description = "Final year internship at LaBRI, Computational Biology team (master's degree, second year): implementation, evaluation, and enhancement of a genetic sequences analysis program, whose purpose is to identify among known strains of a bacterium, which ones are present in a biological sample and in which quantities. The genetic material of the sample being sequenced with a high-throughput method. Supervised by " ? chauve ? "."
       , posUrl      = [] }
 
     , Position
@@ -57,16 +57,12 @@ en = Cv
 
   , backgrounds =
     [ Background
-      { date        = "currently"
-      , designation = "Computer science master's degree at University of Bordeaux, software engineering specialisation (M2, second year)." }
-      
-    , Background
-      { date        = "2017 - 2018"
-      , designation = "Computer science master's degree at University of Bordeaux (M1, first year)." }
+      { date        = "2017 - 2019"
+      , designation = "Computer science master's degree at University of Bordeaux, software engineering specialisation." }
 
     , Background
       { date        = "2016 - 2017"
-      , designation = "Computer science bachelor's degree at University of Bordeaux (L3, third year)." }
+      , designation = "Computer science bachelor's degree at University of Bordeaux (L3)." }
 
     , Background
       { date        = "2013 - 2015"
@@ -99,23 +95,23 @@ en = Cv
      , Skill
        { skill   = "Java"
        , details = "Several projects. Work experience. Good command." }
-        
-     , Skill
-       { skill   = "C"
-       , details = "Several projects. Decent command." }
-      
+              
      , Skill
        { skill   = "Scala"
        , details = "Very interested. Work experience. Decent command." }
 
      , Skill
+       { skill   = "Rust"
+       , details = "Very interested. Decent command." }
+
+     , Skill
+       { skill   = "C"
+       , details = "Several projects. Decent command." }
+
+     , Skill
        { skill   = "Python"
        , details = "Internship experience. Decent command." }
      
-     , Skill
-       { skill   = "Rust"
-       , details = "Very interested. Basic command." }
-
      , Skill
        { skill   = "JavaScript"
        , details = "Basic command." } ]

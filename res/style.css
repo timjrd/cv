@@ -74,7 +74,7 @@ body
 .columns.shrink > p.leaf
 {
     text-align: justify;
-    max-width: 22.1cm;
+    max-width: 17cm;
 }
 
 .horizontal
@@ -147,10 +147,14 @@ section > *:last-child
     margin-bottom: 0;
 }
 
-nav > *
+nav > *, nav > a
 {
     display: inline-flex;
     align-items: center;
+    
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(111,111,111);
 }
 nav > *:after
 {
@@ -176,7 +180,7 @@ img
 {
     width: 3cm;
     height: 3cm;
-    border-radius: 3cm;
+    border-radius: 0.25cm;
     
     position: relative;
     top: 0.4ch;    
@@ -236,16 +240,19 @@ h1, h2, h3, a, .ref, tr.space > *
 {
     color: rgb(153,0,0);
 }
-h2, h3
-{
-    font-size: 130%;
-}
 h1
 {
     font-size: 230%;
 }
+h2
+{
+    font-size: 140%;
+    margin-bottom: 0.2cm;
+}
 h3
 {
+    font-size: 130%;
+    
     margin-bottom: 0.4cm;
     font-weight: bold;
 
