@@ -22,7 +22,7 @@ en = Cv
   , phone         = "+33 6 79 50 56 22"
   , age           = "twenty-four"
 
-  , introduction  = "Fond of computer science and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences, I have acquired specific skills in algorithmics, functional programming, software engineering, data visualization, and web development."
+  , introduction  = "Fond of computer science and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences as a software developer, a student, and a strong hobbyist, I have acquired specific skills in algorithmics, functional programming, software engineering, data visualization, and web development."
   
   , positions =
     [ Position

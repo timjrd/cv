@@ -22,7 +22,7 @@ fr = Cv
   , phone         = "+33 6 79 50 56 22"
   , age           = "24 ans"
 
-  , introduction  = "Passionné et autodidacte, je suis titulaire d'un Master et d'un DUT en informatique. Mes différentes expériences m'ont amené à acquérir des compétences spécifiques en algorithmique, programmation fonctionnelle, génie logiciel, visualisation de données, et développement web."
+  , introduction  = "Passionné et autodidacte, je suis titulaire d'un Master et d'un DUT en informatique. Mes différentes expériences professionnelles, universitaires, et personnelles, m'ont amené à acquérir des compétences spécifiques en algorithmique, programmation fonctionnelle, génie logiciel, visualisation de données, et développement web."
   
   , positions =
     [ Position
