@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-export PDF_PREFIX="timothee-jourde-"
-
 tmp=$(mktemp -d)
 export HOME=$tmp
 
@@ -21,7 +19,7 @@ dist/build/cv/cv
     cd lang
     for src in *.html
     do
-	chromium --headless --disable-gpu --print-to-pdf="${PDF_PREFIX}${src%.html}.pdf" "$src"
+	chromium --headless --disable-gpu --print-to-pdf="${src%.html}.pdf" "$src"
     done
 )
 

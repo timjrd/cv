@@ -11,13 +11,12 @@ import Cv.Types
 import Cv.Renderer
 import Cv.Rich
 
-write :: Cv -> [Cv] -> IO ()
-write cv cvs = do
-  pdfPrefix <- maybe "" id <$> lookupEnv "PDF_PREFIX"
-  let f x  = BS.writeFile ("lang/" ++ lang x ++ ".html")
-           $ renderCv pdfPrefix compactLayout x cvs'
+write :: String -> Cv -> [Cv] -> IO ()
+write prefix cv cvs = do
+  let f x  = BS.writeFile ("lang/" ++ prefix ++ lang x ++ ".html")
+           $ renderCv prefix compactLayout x cvs'
       cv'  = preprocess cv
       cvs' = map preprocess $ nub $ cv:cvs
-  BS.writeFile "index.html" $ indexHtml cv' cvs'      
+  BS.writeFile "index.html" $ indexHtml prefix cv' cvs'      
   mapM_ f cvs'
   

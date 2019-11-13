@@ -18,13 +18,13 @@ import Text.Blaze.Html.Renderer.Utf8
 import Cv.Types
 import Cv.Rich
 
-indexHtml :: Cv -> [Cv] -> ByteString
-indexHtml cv cvs = renderHtml $ do
+indexHtml :: String -> Cv -> [Cv] -> ByteString
+indexHtml prefix cv cvs = renderHtml $ do
   H.docType
   H.html ! A.lang (toValue $ lang cv) $ do
     H.head $ do
       H.meta ! A.charset "utf-8"
-      H.title $ toHtml $ author cv
+      pageTitle cv
     H.body $ H.script $ do
       "var lang = navigator.language || navigator.userLanguage;"
       "switch (lang.substring(0,2)) {"          
@@ -33,26 +33,27 @@ indexHtml cv cvs = renderHtml $ do
         where
           f g x = let l = toHtml (lang x) in do
             g l
-            "window.location = 'lang/" >> l >> ".html';"
+            "window.location = 'lang/" >> (toHtml prefix) >> l >> ".html';"
             "break;"
           case_    l = "case '" >> l >> "':" :: Html
           default_ _ = "default:"            :: Html
 
 
 renderCv :: String -> (String -> Cv -> [Cv] -> Html) -> Cv -> [Cv] -> ByteString
-renderCv pdfPrefix f cv cvs = renderHtml $ do
+renderCv prefix f cv cvs = renderHtml $ do
   H.docType
   H.html ! A.lang (toValue $ lang cv) $ do
     H.head $ do
       H.meta ! A.charset "utf-8"
-      H.meta ! A.name "viewport" ! A.content "width=530"
+      H.meta ! A.name "viewport" ! A.content "width=device-width, initial-scale=1.0"
       H.link ! A.rel "stylesheet" ! A.href "../res/style.prefix.min.css"
-      H.title $ toHtml $ author cv
-    H.body $ f pdfPrefix cv cvs
+      H.meta ! A.name "description" ! (A.content $ toValue $ introduction cv)
+      pageTitle cv
+    H.body $ f prefix cv cvs
 
 compactLayout :: String -> Cv -> [Cv] -> Html
-compactLayout pdfPrefix cv cvs = do
-  navH pdfPrefix cv cvs
+compactLayout prefix cv cvs = do
+  navH prefix cv cvs
   headerH cv
   introductionH cv
   columns .& shrink .$ do
@@ -67,10 +68,10 @@ compactLayout pdfPrefix cv cvs = do
       referencesH   cv
 
 navH :: String -> Cv -> [Cv] -> Html
-navH pdfPrefix cv cvs = columns .$ H.nav .! leaf $ pdf cv >> mapM_ htm (delete cv cvs)
+navH prefix cv cvs = columns .$ H.nav .! leaf $ pdf cv >> mapM_ htm (delete cv cvs)
   where
-    htm x = H.a ! A.href (toValue $ lang x ++ ".html") $ toHtml $ hLang x
-    pdf x = H.a ! A.href (toValue $ pdfPrefix ++ lang x ++ ".pdf")  $ "PDF"
+    htm x = H.a ! A.href (toValue $ prefix ++ lang x ++ ".html") $ toHtml $ hLang x
+    pdf x = H.a ! A.href (toValue $ prefix ++ lang x ++ ".pdf")  $ "PDF"
       
 headerH :: Cv -> Html
 headerH cv = H.header .! columns $ horizontal .& leaf .$ do
@@ -176,6 +177,9 @@ nameH (a,b) = do
   H.span .! "firstname" $ toHtml a
   " "
   H.span .! "lastname"  $ toHtml b
+
+pageTitle :: Cv -> Html
+pageTitle cv = H.title $ toHtml $ author cv ++ " - " ++ occupation cv
 
 
 newtype Class = Class [String]
