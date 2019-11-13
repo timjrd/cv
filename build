@@ -8,8 +8,10 @@ test -z $NO_CONFIGURE && runhaskell Setup.hs configure
 runhaskell Setup.hs build
 
 (
-    cd res
-    autoprefixer-cli -b "last 90 versions" -o - style.css | cleancss -o style.prefix.min.css
+  cd res
+  ( cat style.css ; runhaskell ../css-scale.hs 80 143 ) \
+    | autoprefixer-cli -b "last 90 versions" -o - \
+    | cleancss -o style.min.css
 )
 
 mkdir -p lang
