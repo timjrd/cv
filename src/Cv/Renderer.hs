@@ -45,7 +45,7 @@ renderCv prefix f cv cvs = renderHtml $ do
   H.html ! A.lang (toValue $ lang cv) $ do
     H.head $ do
       H.meta ! A.charset "utf-8"
-      H.meta ! A.name "viewport" ! A.content "width=device-width, initial-scale=1.0"
+      -- H.meta ! A.name "viewport" ! A.content "width=device-width, initial-scale=1.0"
       H.link ! A.rel "stylesheet" ! A.href "../res/style.prefix.min.css"
       H.meta ! A.name "description" ! (A.content $ toValue $ introduction cv)
       pageTitle cv
