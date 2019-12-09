@@ -18,9 +18,9 @@ en = Cv
   , author        = "Timothée Jourde"
   , occupation    = "Software engineer"
   , email         = "timjrd@netc.fr"
-  , website       = ["timjrd.github.io/cv", "github.com/timjrd"]
+  , website       = ["timjrd.github.io", "github.com/timjrd"]
   , phone         = "+33 6 79 50 56 22"
-  , age           = "twenty-four"
+  , age           = "25 y/o"
 
   , introduction  = "Fond of computer science and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences as a software developer, a student, and a strong hobbyist, I have acquired specific skills in algorithmics, functional programming, software engineering, data visualization, and web development."
   
