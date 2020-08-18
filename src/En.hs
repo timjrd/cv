@@ -6,14 +6,14 @@ en = Cv
   { lang          = "en"
   , hLang         = "English"
   , hPortrait     = "portrait photography"
-  
+
   , hPositions    = "Work Experience"
   , hBackgrounds  = "Education"
   , hPublications = "Publication"
   , hLanguages    = "Languages"
   , hSkills       = "Skills"
   , hReferences   = "References"
-  , hHobbies      = "Hobbies"  
+  , hHobbies      = "Hobbies"
 
   , author        = "Timothée Jourde"
   , occupation    = "Software engineer"
@@ -23,7 +23,7 @@ en = Cv
   , age           = "25 y/o"
 
   , introduction  = "Fond of computer science and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences as a software developer, a student, and a strong hobbyist, I have acquired specific skills in algorithmics, functional programming, software engineering, data visualization, and web development."
-  
+
   , positions =
     [ Position
       { period      = ("April - August","2019")
@@ -42,13 +42,13 @@ en = Cv
       , keywords    = ["Scala", "Scala.js", "D3.js"]
       , description = toRich "Software developer position at ISPED, ERIAS team: continuation of the previous project, in partnership with LaBRI (see below)."
       , posUrl      = [] }
-        
+
     , Position
       { period      = ("March - August","2016")
       , keywords    = ["Java", "Lucene", "GWT", "Data mining", "Semantic Web"]
       , description = "Software developer position at ISPED, ERIAS team: development of an online forums analysis system targeted at spotting medications misuses by the population, with a web visualization application. Supervised by " ? dialo ? "."
       , posUrl      = [] }
-        
+
     , Position
       { period      = ("April - May","2015")
       , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Spark", "Big data"]
@@ -71,14 +71,14 @@ en = Cv
     , Background
       { date        = "2013"
       , designation = "High school diploma, mathematics specialisation (BAC S)." } ]
-  
+
   , publications = [pub]
 
   , languages =
     [ Language
       { language = "French"
       , status   = "Native language." }
-        
+
     , Language
       { language = "English"
       , status   = "CEFR B2 (upper intermediate). Daily reading of technical articles and documentation." } ]
@@ -86,23 +86,23 @@ en = Cv
   , skills =
     [[ Skill
        { skill   = "Haskell"
-       , details = "Very interested. Several projets done. Internship experience. Good command of the base language." }
+       , details = "Very interested. Several projects. Internship experience. Good command." }
+
+     , Skill
+       { skill   = "Rust"
+       , details = "Very interested. Several projects. Good command." }
 
      , Skill
        { skill   = "C++"
-       , details = "Interested. Several projets. Internship experience. Good command." }
+       , details = "Interested. Several projects. Internship experience. Good command." }
 
      , Skill
        { skill   = "Java"
        , details = "Several projects. Work experience. Good command." }
-              
+
      , Skill
        { skill   = "Scala"
        , details = "Very interested. Work experience. Decent command." }
-
-     , Skill
-       { skill   = "Rust"
-       , details = "Very interested. Decent command." }
 
      , Skill
        { skill   = "C"
@@ -111,7 +111,7 @@ en = Cv
      , Skill
        { skill   = "Python"
        , details = "Internship experience. Decent command." }
-     
+
      , Skill
        { skill   = "JavaScript"
        , details = "Basic command." } ]
@@ -119,7 +119,7 @@ en = Cv
     ,[ Skill
        { skill   = "GNU/Linux"
        , details = "Good knowledge and daily usage." }
-    
+
      , Skill
        { skill   = "Nix/NixOS"
        , details = "Very interested. Daily usage. Decent command." }
@@ -151,8 +151,8 @@ en = Cv
 
     , Hobby
       { hobby = "Photography"
-      , hobbyDetails = "macro, long-exposure" } ]  
-  
+      , hobbyDetails = "macro, long-exposure" } ]
+
   , references = [chauve, fijalkow, dialo, bourqui] }
 
 pub = Publication
@@ -176,7 +176,7 @@ dialo = Reference
   { name = ("Gayo","Dialo")
   , role = "Associate professor at ISPED, ERIAS team (Bordeaux School of Public Health ; Computer Research Applied to Health)"
   , mail = "gayo.diallo@u-bordeaux.fr" }
-  
+
 bourqui = Reference
   { name = ("Romain","Bourqui")
   , role = "Associate professor at LaBRI, EVADoMe team (Visual Analytics and Interactive Exploration of Massive Data)"

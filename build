@@ -18,11 +18,11 @@ mkdir -p lang
 dist/build/cv/cv
 
 (
-    cd lang
-    for src in *.html
-    do
-	chromium --headless --disable-gpu --print-to-pdf="${src%.html}.pdf" "$src"
-    done
+  cd lang
+  for src in *.html
+  do
+    chromium --headless --disable-gpu --print-to-pdf="${src%.html}.pdf" "$src"
+  done
 )
 
 rm -r $tmp

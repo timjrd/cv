@@ -6,7 +6,7 @@ fr = Cv
   { lang          = "fr"
   , hLang         = "français"
   , hPortrait     = "portrait photographique"
-  
+
   , hPositions    = "Expériences Professionnelles"
   , hBackgrounds  = "Formations"
   , hPublications = "Publication"
@@ -23,14 +23,14 @@ fr = Cv
   , age           = "25 ans"
 
   , introduction  = "Passionné et autodidacte, je suis titulaire d'un Master et d'un DUT en informatique. Mes différentes expériences professionnelles, universitaires, et personnelles, m'ont amené à acquérir des compétences spécifiques en algorithmique, programmation fonctionnelle, génie logiciel, visualisation de données, et développement web."
-  
+
   , positions =
     [ Position
       { period      = ("avril - août","2019")
       , keywords    = ["C++", "Python", "Gurobi", "Optimisation linéaire", "Bio-informatique"]
       , description = "Stage de fin d'études de Master au LaBRI, équipe Biologie Computationnelle : implémentation puis évaluation et amélioration d'un programme d'analyse de séquences génétiques, dont l'objectif est d'identifier parmi l'ensemble des souches connues d'une bactérie, lesquelles sont présentes dans un échantillon et en quelles quantités. Le matériel génétique de l'échantillon étant séquencé avec une méthode haut débit. Supervisé par " ? chauve ? "."
       , posUrl      = [] }
-      
+
     , Position
       { period      = ("juin - juillet","2018")
       , keywords    = ["Haskell", "AI"]
@@ -42,13 +42,13 @@ fr = Cv
       , keywords    = ["Scala", "Scala.js", "D3.js"]
       , description = toRich "Poste de développeur à l'ISPED, équipe ERIAS : poursuite du projet précédent en collaboration avec le LaBRI (voir ci-dessous)."
       , posUrl      = [] }
-        
+
     , Position
       { period      = ("mars - août","2016")
       , keywords    = ["Java", "Lucene", "GWT", "Data mining", "Web sémantique"]
       , description = "Poste de développeur à l'ISPED, équipe ERIAS : développement d'un système d'analyse de forums en ligne afin de détecter des mésusages de médicaments par la population, avec une application web de visualisation. Supervisé par " ? dialo ? "."
       , posUrl      = [] }
-        
+
     , Position
       { period      = ("avril - mai","2015")
       , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Spark", "Big data"]
@@ -59,7 +59,7 @@ fr = Cv
     [ Background
       { date        = "2017 - 2019"
       , designation = "Master Informatique à l'Université de Bordeaux, spécialité Génie Logiciel." }
-    
+
     , Background
       { date        = "2016 - 2017"
       , designation = "Licence Informatique à l'Université de Bordeaux (L3)." }
@@ -71,7 +71,7 @@ fr = Cv
     , Background
       { date        = "2013"
       , designation = "BAC S spécialité Mathématiques." } ]
-  
+
   , publications = [pub]
 
   , languages =
@@ -82,7 +82,11 @@ fr = Cv
   , skills =
     [[ Skill
        { skill   = "Haskell"
-       , details = "Grand intérêt. Plusieurs projets réalisés. Expérience de stage. Bonne maîtrise du langage de base." }
+       , details = "Grand intérêt. Plusieurs projets. Expérience de stage. Bonne maîtrise." }
+
+     , Skill
+       { skill   = "Rust"
+       , details = "Grand intérêt. Plusieurs projets. Bonne maîtrise." }
 
      , Skill
        { skill   = "C++"
@@ -91,14 +95,10 @@ fr = Cv
      , Skill
        { skill   = "Java"
        , details = "Plusieurs projets. Expérience professionnelle. Bonne maîtrise." }
-              
+
      , Skill
        { skill   = "Scala"
        , details = "Grand intérêt. Expérience professionnelle. Maîtrise correcte." }
-
-     , Skill
-       { skill   = "Rust"
-       , details = "Grand intérêt. Maîtrise correcte." }
 
      , Skill
        { skill   = "C"
@@ -107,15 +107,15 @@ fr = Cv
      , Skill
        { skill   = "Python"
        , details = "Expérience de stage. Maîtrise correcte." }
-     
+
      , Skill
        { skill   = "JavaScript"
        , details = "Notions." } ]
-    
+
     ,[ Skill
        { skill   = "GNU/Linux"
        , details = "Bonne connaissance et utilisation quotidienne." }
-    
+
      , Skill
        { skill   = "Nix/NixOS"
        , details = "Grand intérêt et utilisation quotidienne. Maîtrise correcte." }
@@ -148,7 +148,7 @@ fr = Cv
     , Hobby
       { hobby = "Photographie"
       , hobbyDetails = "macro, pose longue" } ]
-  
+
   , references = [chauve, fijalkow, dialo, bourqui] }
 
 pub = Publication
@@ -167,7 +167,7 @@ fijalkow = Reference
   { name = ("Nathanaël","Fijalkow")
   , role = "Chercheur CNRS au LaBRI (LAboratoire Bordelais de Recherche en Informatique), équipe Méthodes Formelles"
   , mail = "nathanael.fijalkow@labri.fr" }
-  
+
 dialo = Reference
   { name = ("Gayo","Dialo")
   , role = "Maître de conférence à l'ISPED, équipe ERIAS (Institut de Santé Publique, d'Épidémiologie et de Développement ; Équipe de Recherche en Informatique Appliquée à la Santé)"
