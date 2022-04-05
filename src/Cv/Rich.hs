@@ -49,5 +49,3 @@ fromRich :: Typeable a => Rich -> [a]
 fromRich (Rich xs) = foldMap f xs
   where f (Rfe (Ref x)) = maybeToList $ cast x
         f _             = []
-
-

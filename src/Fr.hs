@@ -13,59 +13,67 @@ fr = Cv
   , hLanguages    = "Anglais"
   , hSkills       = "Compétences"
   , hReferences   = "Références"
-  , hHobbies      = "Loisirs"
+  , hHobbies      = "Loisirs & Divers"
+  , hProjects     = "Projets Personnels"
 
   , author        = "Timothée Jourde"
   , occupation    = "Ingénieur logiciel"
   , email         = "timjrd@netc.fr"
   , website       = ["timjrd.github.io", "github.com/timjrd"]
+  , location      = "Bordeaux, France"
   , phone         = "+33 6 79 50 56 22"
-  , age           = "25 ans"
+  , age           = "27 ans"
 
-  , introduction  = "Passionné et autodidacte, je suis titulaire d'un Master et d'un DUT en informatique. Mes différentes expériences professionnelles, universitaires, et personnelles, m'ont amené à acquérir des compétences spécifiques en algorithmique, programmation fonctionnelle, génie logiciel, visualisation de données, et développement web."
+  , introduction  = "Passionné et autodidacte, je suis titulaire d'un Master et d'un DUT en informatique. Mes différentes expériences professionnelles, universitaires, et personnelles, m'ont amené à acquérir des compétences en algorithmique et structures de données, en programmation et génie logiciel ; mais aussi en visualisation de données et développement d'interfaces utilisateur."
 
   , positions =
     [ Position
-      { period      = ("avril - août","2019")
-      , keywords    = ["C++", "Python", "Gurobi", "Optimisation linéaire", "Bio-informatique"]
-      , description = "Stage de fin d'études de Master au LaBRI, équipe Biologie Computationnelle : implémentation puis évaluation et amélioration d'un programme d'analyse de séquences génétiques, dont l'objectif est d'identifier parmi l'ensemble des souches connues d'une bactérie, lesquelles sont présentes dans un échantillon et en quelles quantités. Le matériel génétique de l'échantillon étant séquencé avec une méthode haut débit. Supervisé par " ? chauve ? "."
-      , posUrl      = [] }
+      { period      = ["depuis","novembre","2020"]
+      , keywords    = ["C++", "JUCE", "MIDI/MPE", "Windows", "macOS", "iPadOS"]
+      , description = toRich "Poste de développeur chez Joué Music Instruments, fabriquant d'un instrument de musique électronique expressif. Développement d'une application musicale native multiplateforme accompagnant l'instrument : interface utilisateur et communication avec l'appareil en MIDI, principalement."
+      , posUrl      = "jouemusic.com/pages/joue-play-app" }
 
     , Position
-      { period      = ("juin - juillet","2018")
-      , keywords    = ["Haskell", "AI"]
-      , description = "Stage de première année de Master au LaBRI, équipe Méthodes Formelles : conception et réalisation d'un programme-joueur de Mastermind paramétrique. Supervisé par " ? fijalkow ? "."
+      { period      = ["avril à","août 2019"]
+      , keywords    = ["C++", "Python", "Gurobi", "Optimisation linéaire", "Bio-informatique"]
+      , description = toRich "Stage de fin d'études de Master au LaBRI, équipe Biologie Computationnelle : implémentation puis évaluation et amélioration d'un programme d'analyse de séquences génétiques, dont l'objectif est d'identifier parmi l'ensemble des souches connues d'une bactérie, lesquelles sont présentes dans un échantillon et en quelles quantités. Le matériel génétique de l'échantillon étant séquencé avec une méthode haut débit."
+      , posUrl      = "github.com/timjrd/mrsep/tree/master/src/mrsep.ilp" }
+
+    , Position
+      { period      = ["juin à","juillet 2018"]
+      , keywords    = ["Haskell", "IA"]
+      , description = toRich "Stage de première année de Master au LaBRI, équipe Méthodes Formelles : conception et réalisation d'un programme-joueur pour le jeu de société Mastermind."
       , posUrl      = "github.com/timjrd/mastermind" }
 
     , Position
-      { period      = ("juin - juillet","2017")
+      { period      = ["juin à","juillet 2017"]
       , keywords    = ["Scala", "Scala.js", "D3.js"]
       , description = toRich "Poste de développeur à l'ISPED, équipe ERIAS : poursuite du projet précédent en collaboration avec le LaBRI (voir ci-dessous)."
       , posUrl      = [] }
 
     , Position
-      { period      = ("mars - août","2016")
+      { period      = ["mars à","août 2016"]
       , keywords    = ["Java", "Lucene", "GWT", "Data mining", "Web sémantique"]
-      , description = "Poste de développeur à l'ISPED, équipe ERIAS : développement d'un système d'analyse de forums en ligne afin de détecter des mésusages de médicaments par la population, avec une application web de visualisation. Supervisé par " ? dialo ? "."
+      , description = toRich "Poste de développeur à l'ISPED, équipe ERIAS : développement d'un système d'analyse de forums en ligne afin de détecter des mésusages de médicaments par la population, avec une application web de visualisation."
       , posUrl      = [] }
 
     , Position
-      { period      = ("avril - mai","2015")
+      { period      = ["avril à","mai 2015"]
       , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Spark", "Big data"]
-      , description = "Stage de DUT au LaBRI, équipe EVADoMe : réalisation d'une application de visualisation de données massives, basée sur les coordonnées parallèles, avec un back-end sur infrastructure distribuée. Supervisé par " ? bourqui ? ". Ce travail a servi de base à une publication " ? pub ? "."
+      , description = toRich "Stage de DUT au LaBRI, équipe EVADoMe : réalisation d'une application de visualisation de données massives, basée sur les coordonnées parallèles, avec un back-end sur infrastructure distribuée. Ce travail a servi de base à une publication (voir ci-dessous)."
       , posUrl      = [] } ]
 
   , backgrounds =
     [ Background
-      { date        = "2017 - 2019"
+      { date        = "2017 à 2019"
       , designation = "Master Informatique à l'Université de Bordeaux, spécialité Génie Logiciel." }
 
     , Background
-      { date        = "2016 - 2017"
+      { date        = "2016 à 2017"
       , designation = "Licence Informatique à l'Université de Bordeaux (L3)." }
 
     , Background
-      { date        = "2013 - 2015"
+      { date        = "2013 à 2015"
       , designation = "DUT Informatique à l'IUT de Bordeaux." }
 
     , Background
@@ -81,75 +89,99 @@ fr = Cv
 
   , skills =
     [[ Skill
-       { skill   = "Haskell"
-       , details = "Grand intérêt. Plusieurs projets. Expérience de stage. Bonne maîtrise." }
+       { skill   = ["Rust"]
+       , details = "Grand intérêt. Bonne maîtrise." }
 
      , Skill
-       { skill   = "Rust"
-       , details = "Grand intérêt. Plusieurs projets. Bonne maîtrise." }
+       { skill   = ["C++"]
+       , details = "Intérêt. Expérience professionnelle. Bonne maîtrise." }
 
      , Skill
-       { skill   = "C++"
-       , details = "Intérêt. Plusieurs projets. Expérience de stage. Bonne maîtrise." }
+       { skill   = ["Haskell"]
+       , details = "Grand intérêt. Expérience de stage. Bonne maîtrise." }
 
      , Skill
-       { skill   = "Java"
-       , details = "Plusieurs projets. Expérience professionnelle. Bonne maîtrise." }
+       { skill   = ["Java"]
+       , details = "Expérience professionnelle. Bonne maîtrise." }
 
      , Skill
-       { skill   = "Scala"
+       { skill   = ["Scala"]
        , details = "Grand intérêt. Expérience professionnelle. Maîtrise correcte." }
 
      , Skill
-       { skill   = "C"
-       , details = "Plusieurs projets. Maîtrise correcte." }
+       { skill   = ["C"]
+       , details = "Maîtrise correcte." }
 
      , Skill
-       { skill   = "Python"
+       { skill   = ["Python"]
        , details = "Expérience de stage. Maîtrise correcte." }
 
      , Skill
-       { skill   = "JavaScript"
+       { skill   = ["JavaScript"]
        , details = "Notions." } ]
 
     ,[ Skill
-       { skill   = "GNU/Linux"
-       , details = "Bonne connaissance et utilisation quotidienne." }
+       { skill   = ["Linux"]
+       , details = "Intérêt. Bonne connaissance et utilisation quotidienne." }
 
      , Skill
-       { skill   = "Nix/NixOS"
-       , details = "Grand intérêt et utilisation quotidienne. Maîtrise correcte." }
+       { skill   = ["Git"]
+       , details = "Intérêt. Expérience professionnelle. Bonne maîtrise." }
 
      , Skill
-       { skill   = "Git"
-       , details = "Bonne maîtrise." } ]
-
-    ,[ Skill
-       { skill   = "CSS3"
-       , details = "Intérêt. Plusieurs projets. Bonne maîtrise." }
+       { skill   = ["Nix/NixOS"]
+       , details = "Grand intérêt. Maîtrise correcte." }
 
      , Skill
-       { skill   = "XHTML5"
-       , details = "Maîtrise correcte." } ]
+       { skill   = ["CSS/HTML"]
+       , details = "Intérêt. Bonne maîtrise." }
+
+     , Skill
+       { skill   = ["Bash"]
+       , details = "Bonne maîtrise, malheureusement." } ]
 
     ,[ Skill
        { skill   = []
-       , details = "Adepte du logiciel libre. Curieux, culture approfondie en informatique." } ]]
+       , details = "Adepte du logiciel libre, attiré par les modèles économiques impliqués dans l'open‑source. Curieux, culture approfondie en informatique." } ]]
 
   , hobbies =
-    [ Hobby
-      { hobby = "Musique"
-      , hobbyDetails = "batterie, piano, MAO, musique algorithmique" }
+    [[ Hobby
+       { hobby = "Musique"
+       , hobbyDetails = "Batterie, percussions, piano." }
 
-    , Hobby
-      { hobby = "Ski alpin"
-      , hobbyDetails = "bon niveau" }
+     , Hobby
+       { hobby = "Ski alpin"
+       , hobbyDetails = "Bon niveau." }
 
-    , Hobby
-      { hobby = "Photographie"
-      , hobbyDetails = "macro, pose longue" } ]
+     , Hobby
+       { hobby = "Cuisine"
+       , hobbyDetails = "Plats végétariens." } ]
 
-  , references = [chauve, fijalkow, dialo, bourqui] }
+    ,[ Hobby
+       { hobby = []
+       , hobbyDetails = "A visité Gabon, Sénégal, Japon, États‑Unis, Nouvelle-Calédonie, Angleterre, Italie, Espagne, Belgique." } ]
+
+    ,[ Hobby
+       { hobby = []
+       , hobbyDetails = "Permis B, dispose d'un véhicule." } ]]
+
+  , references = []
+
+  , projects =
+    [ Project
+      { projKeywords    = ["Haskell", "IA", "Musique générative", "Synthèse sonore"]
+      , projDescription = "Logiciel produisant un flux audio musical généré aléatoirement (mélodies et timbres). Fait à partir de zéro."
+      , projUrl         = "github.com/timjrd/automagicsynth" }
+
+    , Project
+      { projKeywords    = ["Haskell", "Web scraping", "WebExtensions"]
+      , projDescription = "Métamoteur de recherche de vidéos accessibles sur le Web. Les résultats sont triés selon une estimation de qualité et de durée des vidéos. Une interface graphique web est disponible."
+      , projUrl         = "github.com/timjrd/scrapeaming" }
+
+    , Project
+      { projKeywords    = ["Rust", "Simulation"]
+      , projDescription = "Simulation de Barnes–Hut (problème à N corps) couplée à un code stencil produisant une vidéo esthétique. Fait à partir de zéro."
+      , projUrl         = "github.com/timjrd/stencil-n-body.rs" } ]}
 
 pub = Publication
   { authors = [("Joris","Sansen"), ("Gaëlle","Richer"), ("Timothée","Jourde"), ("Frédéric","Lalanne"), ("David","Auber"), ("Romain","Bourqui")]
@@ -157,23 +189,3 @@ pub = Publication
   , journal = "Informatics"
   , pubDate = "12 juillet 2017"
   , pubUrl  = "www.mdpi.com/2227-9709/4/3/21" }
-
-chauve = Reference
-  { name = ("Cedric","Chauve")
-  , role = "Professeur au Département de Mathématiques de l'Université Simon Fraser"
-  , mail = "cedric.chauve@sfu.ca" }
-
-fijalkow = Reference
-  { name = ("Nathanaël","Fijalkow")
-  , role = "Chercheur CNRS au LaBRI (LAboratoire Bordelais de Recherche en Informatique), équipe Méthodes Formelles"
-  , mail = "nathanael.fijalkow@labri.fr" }
-
-dialo = Reference
-  { name = ("Gayo","Dialo")
-  , role = "Maître de conférence à l'ISPED, équipe ERIAS (Institut de Santé Publique, d'Épidémiologie et de Développement ; Équipe de Recherche en Informatique Appliquée à la Santé)"
-  , mail = "gayo.diallo@u-bordeaux.fr" }
-
-bourqui = Reference
-  { name = ("Romain","Bourqui")
-  , role = "Maître de conférence au LaBRI, équipe EVADoMe (Exploration Visuelle et Analytique de DOnnées MassivEs)"
-  , mail = "bourqui@labri.fr" }

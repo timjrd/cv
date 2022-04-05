@@ -17,6 +17,5 @@ write prefix cv cvs = do
            $ renderCv prefix compactLayout x cvs'
       cv'  = preprocess cv
       cvs' = map preprocess $ nub $ cv:cvs
-  BS.writeFile "index.html" $ indexHtml prefix cv' cvs'      
+  BS.writeFile "index.html" $ indexHtml prefix cv' cvs'
   mapM_ f cvs'
-  

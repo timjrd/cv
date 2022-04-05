@@ -27,7 +27,7 @@ indexHtml prefix cv cvs = renderHtml $ do
       pageTitle cv
     H.body $ H.script $ do
       "var lang = navigator.language || navigator.userLanguage;"
-      "switch (lang.substring(0,2)) {"          
+      "switch (lang.substring(0,2)) {"
       mapM_ (f case_) (delete cv cvs) >> f default_ cv
       "}"
         where
@@ -37,7 +37,6 @@ indexHtml prefix cv cvs = renderHtml $ do
             "break;"
           case_    l = "case '" >> l >> "':" :: Html
           default_ _ = "default:"            :: Html
-
 
 renderCv :: String -> (String -> Cv -> [Cv] -> Html) -> Cv -> [Cv] -> ByteString
 renderCv prefix f cv cvs = renderHtml $ do
@@ -63,19 +62,20 @@ compactLayout prefix cv cvs = do
       publicationsH cv
     H.div $ do
       skillsH       cv
+      projectsH     cv
       languagesH    cv
       hobbiesH      cv
-      referencesH   cv
+      -- referencesH   cv
 
 navH :: String -> Cv -> [Cv] -> Html
 navH prefix cv cvs = columns .$ H.nav .! leaf $ pdf cv >> mapM_ htm (delete cv cvs)
   where
     htm x = H.a ! A.href (toValue $ prefix ++ lang x ++ ".html") $ toHtml $ hLang x
     pdf x = H.a ! A.href (toValue $ prefix ++ lang x ++ ".pdf")  $ "PDF"
-      
+
 headerH :: Cv -> Html
 headerH cv = H.header .! columns $ horizontal .& leaf .$ do
-  H.img ! A.alt (toValue $ hPortrait cv) ! A.src "../res/portrait.png"
+  H.img ! A.alt (toValue $ hPortrait cv) ! A.src "../res/portrait.jpg"
   H.div $ do
     H.div $ do
       H.h1 $ toHtml $ author     cv
@@ -85,8 +85,9 @@ headerH cv = H.header .! columns $ horizontal .& leaf .$ do
         mailto $ email cv
         mapM_ (\x -> web .$ http x) $ website cv
       H.div $ do
-        H.div $ toHtml $ phone cv
-        H.div $ toHtml $ age   cv
+        H.div $ toHtml $ phone    cv
+        H.div $ toHtml $ location cv
+        H.div $ toHtml $ age      cv
 
 introductionH :: Cv -> Html
 introductionH cv = columns .& shrink .$ H.p .! leaf $ toHtml $ introduction cv
@@ -97,10 +98,19 @@ positionsH cv = H.section .! leaf $ do
   H.table $ mapM_ f $ positions cv
   where
     f x = H.tr $ do
-      H.th $ let (a,b) = period x in toHtml a >> H.br >> toHtml b
+      H.th $ mapM_ (\x -> toHtml x >> H.br) $ period x
       H.td $ do
         H.ul .! horizontal $ mapM_ (H.li . toHtml) $ keywords x
         H.p $ (foldRich' cv $ description x) >> H.br >> (http $ posUrl x)
+
+projectsH :: Cv -> Html
+projectsH cv = H.section .! leaf $ do
+  H.h3 $ toHtml $ hProjects cv
+  H.table $ mapM_ f $ projects cv
+  where
+    f x = H.tr $ H.td $ do
+      H.ul .! horizontal $ mapM_ (H.li . toHtml) $ projKeywords x
+      H.p $ (toHtml $ projDescription x) >> H.br >> (http $ projUrl x)
 
 backgroundsH :: Cv -> Html
 backgroundsH cv = H.section .! leaf $ do
@@ -110,14 +120,14 @@ backgroundsH cv = H.section .! leaf $ do
     f x = H.tr $ do
       H.th $ toHtml $ date x
       H.td $ toHtml $ designation x
-    
+
 publicationsH :: Cv -> Html
 publicationsH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hPublications cv
   H.table $ mapM_ f $ publications cv
   where
     f x = H.tr $ do
-      H.th $ label cv x
+      -- H.th $ label cv x
       H.td $ do
         sequence_
           $ intersperse ", "
@@ -125,11 +135,11 @@ publicationsH cv = H.section .! leaf $ do
           $ authors x
         ". "
         "“" >> toHtml (title x) >> "”. "
-        H.em (toHtml $ journal x) >> ". "
+        H.em (toHtml $ journal x) >> ". "
         H.em (toHtml $ pubDate x) >> "." >> H.br
         http $ pubUrl x
 
-languagesH :: Cv -> Html  
+languagesH :: Cv -> Html
 languagesH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hLanguages cv
   H.table $ mapM_ f $ languages cv
@@ -138,10 +148,13 @@ languagesH cv = H.section .! leaf $ do
       if null (language x) then mempty else H.th $ toHtml $ language x
       H.td $ toHtml $ status x
 
-hobbiesH :: Cv -> Html  
+hobbiesH :: Cv -> Html
 hobbiesH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hHobbies cv
-  H.table $ mapM_ f $ hobbies cv
+  H.table .! compact
+    $ mconcat
+    $ intersperse trspace
+    $ mapM_ f <$> hobbies cv
   where
     f x = H.tr $ do
       H.th $ toHtml $ hobby x
@@ -150,17 +163,18 @@ hobbiesH cv = H.section .! leaf $ do
 skillsH :: Cv -> Html
 skillsH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hSkills cv
-  H.table
+  H.table .! compact
     $ mconcat
     $ intersperse trspace
     $ mapM_ f <$> skills cv
   where
     f x = H.tr $ do
-      H.th $ toHtml $ skill x
+      H.th $ mapM_ (\x -> toHtml x >> H.br) $ skill x
       H.td $ toHtml $ details x
-    trspace = H.tr $ H.td mempty >> H.td (space .$ mempty)
 
-referencesH :: Cv -> Html  
+trspace = H.tr .! space $ H.th mempty >> H.td (H.div mempty)
+
+referencesH :: Cv -> Html
 referencesH cv = H.section .! leaf $ do
   H.h3 $ toHtml $ hReferences cv
   H.table $ mapM_ f $ references cv
@@ -181,7 +195,6 @@ nameH (a,b) = do
 pageTitle :: Cv -> Html
 pageTitle cv = H.title $ toHtml $ author cv ++ " - " ++ occupation cv
 
-
 newtype Class = Class [String]
 
 instance IsString Class where
@@ -199,6 +212,7 @@ horizontal = "horizontal" :: Class
 columns    = "columns"    :: Class
 leaf       = "leaf"       :: Class
 shrink     = "shrink"     :: Class
+compact    = "compact"    :: Class
 web        = "web"        :: Class
 space      = "space"      :: Class
 ref_       = "ref"        :: Class
@@ -233,7 +247,6 @@ indexOf cv x = (1+)
   $ findIndex (x==)
   $ map Ref (publications cv)
   ++ map Ref (references cv)
-  
+
 foldRich' :: Cv -> Rich -> Html
 foldRich' = foldRich toHtml . ref
-

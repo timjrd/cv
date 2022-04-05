@@ -30,9 +30,9 @@ html, body, body *
     font-family: biolinum, sans-serif;
     font-weight: normal;
     font-size: 100%;
-    
+
     border-collapse: collapse;
-    
+
     text-align: left;
     vertical-align: top;
 }
@@ -74,7 +74,7 @@ body
 .columns.shrink > p.leaf
 {
     text-align: justify;
-    max-width: 17cm;
+    max-width: 17.5cm;
 }
 
 .horizontal
@@ -103,7 +103,17 @@ body
 
 tr > *
 {
-    border: 0.25cm solid transparent; 
+    border: 0.3cm solid transparent;
+}
+table.compact tr > *
+{
+    border-top-width: 0.15cm;
+    border-bottom-width: 0.15cm;
+}
+table.compact tr.space > *
+{
+    border-top-width: 0.3cm;
+    border-bottom-width: 0.3cm;
 }
 tr:first-child > *
 {
@@ -126,16 +136,16 @@ table
 {
     position: relative;
 }
-.space
+tr.space div
 {
     position: absolute;
     left: 50%;
-    
-    width: 1cm;
-    
-    transform: translate(-50%) scaleY(0.33);
-    
-    border-top: 1px solid rgb(153,0,0);
+
+    width: 1.5cm;
+
+    transform: translate(-50%) scaleY(0.5);
+
+    border-top: 2px solid rgb(153,0,0);
 }
 
 section > *
@@ -151,7 +161,7 @@ nav > *, nav > a
 {
     display: inline-flex;
     align-items: center;
-    
+
     font-family: monospace;
     font-weight: bold;
     color: rgb(111,111,111);
@@ -178,12 +188,12 @@ header > .horizontal
 
 img
 {
-    width: 3cm;
-    height: 3cm;
-    border-radius: 0.25cm;
-    
+    width: 3.3cm;
+    height: 3.3cm;
+    border-radius: 0.4cm;
+
     position: relative;
-    top: 0.4ch;    
+    top: 0.6ch;
 }
 
 span.ref
@@ -220,6 +230,15 @@ td, td *
 {
     text-align: justify;
 }
+td > ul.horizontal
+{
+    margin-bottom: 0.1cm;
+}
+td > p > a, td > a
+{
+    display: inline-block;
+    margin-top: 0.1cm;
+}
 th, a
 {
     white-space: nowrap;
@@ -236,7 +255,7 @@ th .ref
 {
     font-style: normal;
 }
-h1, h2, h3, a, .ref, tr.space > *
+h1, h2, h3, a, .ref
 {
     color: rgb(153,0,0);
 }
@@ -252,7 +271,7 @@ h2
 h3
 {
     font-size: 130%;
-    
+
     margin-bottom: 0.4cm;
     font-weight: bold;
 
@@ -263,16 +282,17 @@ h3
 {
     @page
     {
-	margin: 0;
-	size: A4;
+	      margin: 0;
+	      size: A4;
     }
     body
     {
-	zoom: 69.9%;
-	margin: 1.45cm;
+	      zoom: 66%;
+	      margin: 1.5cm;
+        margin-top: 2.1cm;
     }
     nav
     {
-	display: none;
+	      display: none;
     }
 }

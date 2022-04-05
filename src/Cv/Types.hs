@@ -15,14 +15,16 @@ data Cv = Cv { lang          :: String
              , hSkills       :: String
              , hReferences   :: String
              , hHobbies      :: String
-             
+             , hProjects     :: String
+
              , author        :: String
              , occupation    :: String
              , email         :: String
              , website       :: [String]
+             , location      :: String
              , phone         :: String
              , age           :: String
-             
+
              , introduction  :: String
              , positions     :: [Position]
              , backgrounds   :: [Background]
@@ -30,10 +32,11 @@ data Cv = Cv { lang          :: String
              , languages     :: [Language]
              , skills        :: [[Skill]]
              , references    :: [Reference]
-             , hobbies       :: [Hobby] }
+             , hobbies       :: [[Hobby]]
+             , projects      :: [Project] }
   deriving Eq
 
-data Position = Position { period      :: (String,String)
+data Position = Position { period      :: [String]
                          , keywords    :: [String]
                          , description :: Rich
                          , posUrl      :: String }
@@ -54,7 +57,7 @@ data Language = Language { language :: String
                          , status   :: String }
   deriving Eq
 
-data Skill = Skill { skill   :: String
+data Skill = Skill { skill   :: [String]
                    , details :: String }
   deriving Eq
 
@@ -65,6 +68,11 @@ data Reference = Reference { name :: (String,String)
 
 data Hobby = Hobby { hobby        :: String
                    , hobbyDetails :: String }
+  deriving Eq
+
+data Project = Project { projKeywords    :: [String]
+                       , projDescription :: String
+                       , projUrl         :: String }
   deriving Eq
 
 preprocess :: Cv -> Cv
