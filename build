@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#! /usr/bin/env nix-shell
+#! nix-shell --pure -i bash
+
 set -e
 
 tmp=$(mktemp -d)

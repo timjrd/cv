@@ -22,13 +22,19 @@ en = Cv
   , website       = ["timjrd.github.io", "github.com/timjrd"]
   , location      = "Bordeaux, France"
   , phone         = "+33 6 79 50 56 22"
-  , age           = "27 y/o"
+  , age           = "28 y/o"
 
   , introduction  = "Fond of computer science and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences as a software developer, a student, and a strong hobbyist, I have acquired skills in algorithmics and data structures, programming and software engineering; but also in data visualization and development of user interfaces."
 
   , positions =
     [ Position
-      { period      = ["since","November","2020"]
+      { period      = ["September to","November 2022"]
+      , keywords    = ["Rust", "Iced", "International", "Remote"]
+      , description = toRich "Software engineer position at Kraken. Front-end work on Cryptowatch Desktop, a native cross-platform trading terminal built with Iced: an in-house open-source Rust GUI toolkit. International English-speaking full-remote team. Laid-off as part of a large-scale reduction in force."
+      , posUrl      = "cryptowat.ch/apps/desktop" }
+
+    , Position
+      { period      = ["November 2020","to July 2022"]
       , keywords    = ["C++", "JUCE", "MIDI/MPE", "Windows", "macOS", "iPadOS"]
       , description = toRich "Software developer position at Joué Music Instruments, manufacturer of an expressive electronic musical instrument. Development of a native cross-platform musical application working with the instrument: mainly user interface and communication with the device through MIDI."
       , posUrl      = "jouemusic.com/en/pages/joue-play-app" }
@@ -89,12 +95,12 @@ en = Cv
 
     , Language
       { language = "English"
-      , status   = "CEFR B2 (upper intermediate). Daily reading of technical articles and documentation." } ]
+      , status   = "See last work experience (international English-speaking team). Daily reading of technical articles and documentation." } ]
 
   , skills =
     [[ Skill
        { skill   = ["Rust"]
-       , details = "Very interested. Good command." }
+       , details = "Very interested. Work experience. Good command." }
 
      , Skill
        { skill   = ["C++"]

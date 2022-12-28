@@ -22,13 +22,19 @@ fr = Cv
   , website       = ["timjrd.github.io", "github.com/timjrd"]
   , location      = "Bordeaux, France"
   , phone         = "+33 6 79 50 56 22"
-  , age           = "27 ans"
+  , age           = "28 ans"
 
   , introduction  = "Passionné et autodidacte, je suis titulaire d'un Master et d'un DUT en informatique. Mes différentes expériences professionnelles, universitaires, et personnelles, m'ont amené à acquérir des compétences en algorithmique et structures de données, en programmation et génie logiciel ; mais aussi en visualisation de données et développement d'interfaces utilisateur."
 
   , positions =
     [ Position
-      { period      = ["depuis","novembre","2020"]
+      { period      = ["Septembre à","Novembre 2022"]
+      , keywords    = ["Rust", "Iced", "International", "Remote"]
+      , description = toRich "Poste d'ingénieur logiciel chez Kraken. Développement de Cryptowatch Desktop (front-end), un terminal de trading natif multiplateforme réalisé avec Iced : un GUI toolkit maison et open-source en Rust. Équipe internationale anglophone et full-remote. Licencié lors d'une réduction massive du personnel."
+      , posUrl      = "cryptowat.ch/apps/desktop" }
+
+    , Position
+      { period      = ["Novembre 2020","à Juillet 2022"]
       , keywords    = ["C++", "JUCE", "MIDI/MPE", "Windows", "macOS", "iPadOS"]
       , description = toRich "Poste de développeur chez Joué Music Instruments, fabriquant d'un instrument de musique électronique expressif. Développement d'une application musicale native multiplateforme accompagnant l'instrument : interface utilisateur et communication avec l'appareil en MIDI, principalement."
       , posUrl      = "jouemusic.com/pages/joue-play-app" }
@@ -85,12 +91,12 @@ fr = Cv
   , languages =
     [ Language
       { language = []
-      , status   = "CEFR B2 (niveau intermédiaire avancé). Lecture quotidienne d'articles techniques et de documentation." } ]
+      , status   = "Voir dernière expérience professionnelle (équipe internationale anglophone). Lecture quotidienne d'articles techniques et de documentation." } ]
 
   , skills =
     [[ Skill
        { skill   = ["Rust"]
-       , details = "Grand intérêt. Bonne maîtrise." }
+       , details = "Grand intérêt. Expérience professionnelle. Bonne maîtrise." }
 
      , Skill
        { skill   = ["C++"]

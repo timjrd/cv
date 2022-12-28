@@ -37,6 +37,12 @@ html, body, body *
     vertical-align: top;
 }
 
+html
+{
+    max-width: 40cm;
+    margin: auto;
+}
+
 body
 {
     margin: 0.4cm;
@@ -287,9 +293,10 @@ h3
     }
     body
     {
-	      zoom: 66%;
-	      margin: 1.5cm;
-        margin-top: 2.1cm;
+	      zoom: 65%;
+	      margin: 1.4cm;
+        margin-top: 1.5cm;
+        margin-bottom: 0;
     }
     nav
     {
