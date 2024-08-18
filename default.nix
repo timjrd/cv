@@ -9,6 +9,7 @@ stdenv.lib.overrideDerivation (
     chromium
     autoprefixer-cli
     clean-css-cli
+    poppler_utils
   ];
   postUnpack   = "(cd $sourceRoot && rm -rf index.html dist lang res/style.prefix.min.css)";
   buildPhase   = "NO_CONFIGURE=true bash build";

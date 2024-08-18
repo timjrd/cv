@@ -46,6 +46,7 @@ html
 body
 {
     margin: 0.4cm;
+    margin-bottom: 1.2cm;
 }
 
 .columns
@@ -194,12 +195,12 @@ header > .horizontal
 
 img
 {
-    width: 3.3cm;
-    height: 3.3cm;
-    border-radius: 0.4cm;
+    width: 3.2cm;
+    height: 3.2cm;
+    border-radius: 3.2cm;
 
     position: relative;
-    top: 0.6ch;
+    top: 0.5ch;
 }
 
 span.ref
@@ -271,8 +272,8 @@ h1
 }
 h2
 {
-    font-size: 140%;
-    margin-bottom: 0.2cm;
+    font-size: 145%;
+    margin-bottom: 0.3cm;
 }
 h3
 {
@@ -288,18 +289,18 @@ h3
 {
     @page
     {
-	      margin: 0;
-	      size: A4;
+	margin: 0;
+	size: A4;
     }
     body
     {
-	      zoom: 65%;
-	      margin: 1.4cm;
-        margin-top: 1.5cm;
+	zoom: 65%;
+	margin: 1.4cm;
+        margin-top: 1.1cm;
         margin-bottom: 0;
     }
     nav
     {
-	      display: none;
+	display: none;
     }
 }

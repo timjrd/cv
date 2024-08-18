@@ -27,4 +27,9 @@ dist/build/cv/cv
   done
 )
 
+pdfunite \
+  lang/timothee-jourde-en.pdf \
+  lang/timothee-jourde-fr.pdf \
+  lang/timothee-jourde-en-fr.pdf
+
 rm -r $tmp

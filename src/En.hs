@@ -17,56 +17,62 @@ en = Cv
   , hProjects     = "Personal Projects"
 
   , author        = "Timothée Jourde"
-  , occupation    = "Software engineer"
-  , email         = "timjrd@netc.fr"
-  , website       = ["timjrd.github.io", "github.com/timjrd"]
-  , location      = "Bordeaux, France"
-  , phone         = "+33 6 79 50 56 22"
-  , age           = "28 y/o"
+  , occupation    = "Programmer"
+  , email         = "timjrd@pm.me"
+  , website       = ["github.com/timjrd"]
+  , location      = "Paris, France"
+  , phone         = ""
+  , age           = "29 y/o"
 
-  , introduction  = "Fond of computer science and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences as a software developer, a student, and a strong hobbyist, I have acquired skills in algorithmics and data structures, programming and software engineering; but also in data visualization and development of user interfaces."
+  , introduction  = "Fond of everything computers and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences as a software developer, a student, and a strong hobbyist, I have acquired skills in algorithmics and data structures, programming and software engineering; but also in desktop development, data visualization, front-ends, and Linux systems."
 
   , positions =
     [ Position
+      { period      = ["since","June 2023"]
+      , keywords    = ["C++", "Slint", "Embedded Linux", "Full remote"]
+      , description = toRich "Software engineer position at Witekio. Front-end and middleware work on a demo showcasing Welma: an in-house embedded Linux distribution. Other middleware works for end customers."
+      , posUrl      = "youtu.be/Ewj-gwSNXmc?t=36" }
+
+    , Position
       { period      = ["September to","November 2022"]
-      , keywords    = ["Rust", "Iced", "International", "Remote"]
-      , description = toRich "Software engineer position at Kraken. Front-end work on Cryptowatch Desktop, a native cross-platform trading terminal built with Iced: an in-house open-source Rust GUI toolkit. International English-speaking full-remote team. Laid-off as part of a large-scale reduction in force."
-      , posUrl      = "cryptowat.ch/apps/desktop" }
+      , keywords    = ["Rust", "Iced", "International", "Full remote"]
+      , description = toRich "Software engineer position at Kraken. Front-end work on Cryptowatch Desktop, a cross-platform trading terminal built with Iced: an in-house open-source GUI toolkit. International English-speaking team. Laid-off as part of a large-scale reduction in force."
+      , posUrl      = "youtu.be/Ja2PDH8Py5g?t=115" }
 
     , Position
       { period      = ["November 2020","to July 2022"]
       , keywords    = ["C++", "JUCE", "MIDI/MPE", "Windows", "macOS", "iPadOS"]
-      , description = toRich "Software developer position at Joué Music Instruments, manufacturer of an expressive electronic musical instrument. Development of a native cross-platform musical application working with the instrument: mainly user interface and communication with the device through MIDI."
-      , posUrl      = "jouemusic.com/en/pages/joue-play-app" }
+      , description = toRich "Software developer position at Joué Music Instruments, manufacturer of an electronic musical instrument. Development of a cross-platform musical application controlled by the instrument: mainly front-end work and communication with the device through MIDI."
+      , posUrl      = "youtu.be/C7f7ln0NPGc" }
 
     , Position
       { period      = ["April to","August 2019"]
-      , keywords    = ["C++", "Python", "Gurobi", "Linear optimization", "Bioinformatics"]
-      , description = toRich "Final year internship at LaBRI, Computational Biology team (master's degree, second year): implementation, evaluation, and enhancement of a genetic sequences analysis program, whose purpose is to identify among known strains of a bacterium, which ones are present in a biological sample and in which quantities. The genetic material of the sample being sequenced with a high‑throughput method."
+      , keywords    = ["C++", "Python", "Bioinformatics", "Academia"]
+      , description = toRich "Final year internship at LaBRI, Computational Biology team (master's degree): implementation and benchmarking of a genetic sequences analysis program."
       , posUrl      = "github.com/timjrd/mrsep/tree/master/src/mrsep.ilp" }
 
     , Position
       { period      = ["June to","July 2018"]
-      , keywords    = ["Haskell", "AI"]
+      , keywords    = ["Haskell", "Academia"]
       , description = toRich "Internship at LaBRI, Formal Methods team (master's degree, first year): design and implementation of a computer player for the Mastermind board game."
       , posUrl      = "github.com/timjrd/mastermind" }
 
     , Position
       { period      = ["June to","July 2017"]
-      , keywords    = ["Scala", "Scala.js", "D3.js"]
+      , keywords    = ["Scala", "Scala.js", "Academia"]
       , description = toRich "Software developer position at ISPED, ERIAS team: continuation of the previous project, in partnership with LaBRI (see below)."
       , posUrl      = [] }
 
     , Position
       { period      = ["March to","August 2016"]
-      , keywords    = ["Java", "Lucene", "GWT", "Data mining", "Semantic Web"]
-      , description = toRich "Software developer position at ISPED, ERIAS team: development of an online forums analysis system targeted at spotting medications misuses by the population, with a web visualization application."
+      , keywords    = ["Java", "Lucene", "GWT", "Academia"]
+      , description = toRich "Software developer position at ISPED, ERIAS team: development of an online forums analysis system targeted at spotting medications misuses by the population, with a Web-based visualization application."
       , posUrl      = [] }
 
     , Position
       { period      = ["April to","May 2015"]
-      , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Spark", "Big data"]
-      , description = toRich "Internship at LaBRI, EVADoMe team (technical degree): implementation of a massive data visualization application based on parallel coordinates, with a distributed backend infrastructure. This work has provided the basis for a publication (see below)."
+      , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Academia"]
+      , description = toRich "Internship at LaBRI, EVADoMe team (technical degree): implementation of a massive data visualization application based on parallel coordinates, with a distributed backend infrastructure. This work has provided some basis for a scientific publication (see below)."
       , posUrl      = [] } ]
 
   , backgrounds =
@@ -95,7 +101,7 @@ en = Cv
 
     , Language
       { language = "English"
-      , status   = "See last work experience (international English-speaking team). Daily reading of technical articles and documentation." } ]
+      , status   = "See position at Kraken (international English-speaking team). Daily reading of technical articles and documentation." } ]
 
   , skills =
     [[ Skill
@@ -132,7 +138,7 @@ en = Cv
 
     ,[ Skill
        { skill   = ["Linux"]
-       , details = "Interested. Good knowledge and daily usage." }
+       , details = "Very interested. Good general knowledge. Daily usage." }
 
      , Skill
        { skill   = ["Git"]
@@ -140,57 +146,69 @@ en = Cv
 
      , Skill
        { skill   = ["Nix/NixOS"]
-       , details = "Very interested. Decent command." }
+       , details = "Very interested. Good command." }
 
      , Skill
        { skill   = ["CSS/HTML"]
-       , details = "Interested. Good command." }
+       , details = "Interested. Decent command." }
 
      , Skill
        { skill   = ["Bash"]
-       , details = "Good command, unfortunately." } ]
+       , details = "Good command, unfortunately." }
+
+     , Skill
+       { skill   = ["Emacs"]
+       , details = "Stockholm syndrome." } ]
 
     ,[ Skill
        { skill   = []
-       , details = "Free Software enthusiast, interested by business models involved in open‑source. Inquisitive, in-depth computer science knowledge." } ]]
+       , details = "Free Software enthusiast, interested by business models involved in open-source. Inquisitive, in-depth computer science knowledge." } ]]
 
   , hobbies =
     [[ Hobby
-       { hobby = "Music"
-       , hobbyDetails = "Drums, percussion, piano." }
-
-     , Hobby
        { hobby = "Alpine skiing"
        , hobbyDetails = "Good level." }
 
      , Hobby
+       { hobby = "Inline skating"
+       , hobbyDetails = "Decent level. Steady training." }
+
+     , Hobby
        { hobby = "Cooking"
-       , hobbyDetails = "Vegetarian dishes." } ]
+       , hobbyDetails = "Vegetarian dishes." }
+
+    , Hobby
+       { hobby = "Music"
+       , hobbyDetails = "Drums, percussion, piano." }
+
+     , Hobby
+       { hobby = "Politics"
+       , hobbyDetails = "Strong supporter of the European integration." } ]
 
     ,[ Hobby
        { hobby = []
-       , hobbyDetails = "Went to Gabon, Senegal, Japan, United States, New Caledonia, England, Italy, Spain, Belgium." } ]
+       , hobbyDetails = "Went to Gabon, Japan, Senegal, United States, Turkey, New Caledonia, Italy, United Kingdom, Spain, Belgium." } ]
 
     ,[ Hobby
        { hobby = []
-       , hobbyDetails = "Driving licence (permis B), have a car." } ]]
+       , hobbyDetails = "Driving licence (permis B)." } ]]
 
   , references = []
 
   , projects =
     [ Project
-      { projKeywords    = ["Haskell", "AI", "Generative music", "Sound synthesis"]
+      { projKeywords    = ["Haskell", "Generative music", "Sound synthesis"]
       , projDescription = "Software producing a musical audio stream that is randomly generated (both melodies and timbres). Done from scratch."
       , projUrl         = "github.com/timjrd/automagicsynth" }
 
     , Project
       { projKeywords    = ["Haskell", "Web scraping", "WebExtensions"]
-      , projDescription = "Metasearch engine for online videos. The results are sorted by quality estimation and duration of the videos. A web-based graphical user interface is available."
+      , projDescription = "Metasearch engine for online videos (CLI and Web GUI). Results are sorted by quality estimation, and duration of the videos."
       , projUrl         = "github.com/timjrd/scrapeaming" }
 
     , Project
       { projKeywords    = ["Rust", "Simulation"]
-      , projDescription = "Barnes–Hut N-body simulation on a grid together with a stencil code producing an artistic video. Done from scratch."
+      , projDescription = "Barnes–Hut N-body simulation mixed with a stencil code, producing an artistic video. Done from scratch."
       , projUrl         = "github.com/timjrd/stencil-n-body.rs" } ]}
 
 pub = Publication
@@ -198,4 +216,4 @@ pub = Publication
   , title   = "Visual Exploration of Large Multidimensional Data Using Parallel Coordinates on Big Data Infrastructure"
   , journal = "Informatics"
   , pubDate = "12 July 2017"
-  , pubUrl  = "www.mdpi.com/2227-9709/4/3/21" }
+  , pubUrl  = "mdpi.com/2227-9709/4/3/21" }
