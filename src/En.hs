@@ -22,55 +22,55 @@ en = Cv
   , website       = ["github.com/timjrd"]
   , location      = "Paris, France"
   , phone         = ""
-  , age           = "29 y/o"
+  , age           = "30 y/o"
 
   , introduction  = "Fond of everything computers and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences as a software developer, a student, and a strong hobbyist, I have acquired skills in algorithmics and data structures, programming and software engineering; but also in desktop development, data visualization, front-ends, and Linux systems."
 
   , positions =
     [ Position
       { period      = ["since","June 2023"]
-      , keywords    = ["C++", "Slint", "Embedded Linux", "Full remote"]
+      , keywords    = ["C++", "Slint", "Embedded Linux", "Full remote", "Permanent"]
       , description = toRich "Software engineer position at Witekio. Front-end and middleware work on a demo showcasing Welma: an in-house embedded Linux distribution. Other middleware works for end customers."
       , posUrl      = "youtu.be/Ewj-gwSNXmc?t=36" }
 
     , Position
       { period      = ["September to","November 2022"]
-      , keywords    = ["Rust", "Iced", "International", "Full remote"]
+      , keywords    = ["Rust", "Iced", "International", "Full remote", "Self-employed"]
       , description = toRich "Software engineer position at Kraken. Front-end work on Cryptowatch Desktop, a cross-platform trading terminal built with Iced: an in-house open-source GUI toolkit. International English-speaking team. Laid-off as part of a large-scale reduction in force."
       , posUrl      = "youtu.be/Ja2PDH8Py5g?t=115" }
 
     , Position
       { period      = ["November 2020","to July 2022"]
-      , keywords    = ["C++", "JUCE", "MIDI/MPE", "Windows", "macOS", "iPadOS"]
-      , description = toRich "Software developer position at Joué Music Instruments, manufacturer of an electronic musical instrument. Development of a cross-platform musical application controlled by the instrument: mainly front-end work and communication with the device through MIDI."
+      , keywords    = ["C++", "JUCE", "MIDI/MPE", "Windows", "macOS", "iPadOS", "Permanent"]
+      , description = toRich "Software developer position at Joué Music Instruments, manufacturer of an electronic musical instrument. Development of a cross-platform musical application controlled by the device: mainly front-end work and communication with the instrument through MIDI."
       , posUrl      = "youtu.be/C7f7ln0NPGc" }
 
     , Position
       { period      = ["April to","August 2019"]
-      , keywords    = ["C++", "Python", "Bioinformatics", "Academia"]
+      , keywords    = ["C++", "Python", "Bioinformatics", "Academia", "Internship"]
       , description = toRich "Final year internship at LaBRI, Computational Biology team (master's degree): implementation and benchmarking of a genetic sequences analysis program."
       , posUrl      = "github.com/timjrd/mrsep/tree/master/src/mrsep.ilp" }
 
     , Position
       { period      = ["June to","July 2018"]
-      , keywords    = ["Haskell", "Academia"]
-      , description = toRich "Internship at LaBRI, Formal Methods team (master's degree, first year): design and implementation of a computer player for the Mastermind board game."
+      , keywords    = ["Haskell", "Academia", "Internship"]
+      , description = toRich "Internship at LaBRI, Formal Methods team (master's degree, first year): design and implementation of a computer player for a generalization of the Mastermind board game."
       , posUrl      = "github.com/timjrd/mastermind" }
 
     , Position
       { period      = ["June to","July 2017"]
-      , keywords    = ["Scala", "Scala.js", "Academia"]
+      , keywords    = ["Scala", "Scala.js", "Academia", "Contract"]
       , description = toRich "Software developer position at ISPED, ERIAS team: continuation of the previous project, in partnership with LaBRI (see below)."
       , posUrl      = [] }
 
     , Position
-      { period      = ["March to","August 2016"]
+      { period      = ["March to","August 2016", "Contract"]
       , keywords    = ["Java", "Lucene", "GWT", "Academia"]
-      , description = toRich "Software developer position at ISPED, ERIAS team: development of an online forums analysis system targeted at spotting medications misuses by the population, with a Web-based visualization application."
+      , description = toRich "Software developer position at ISPED, ERIAS team: development of an online discussion forums analysis system targeted at spotting medication misuse trends, with a Web-based visualization application."
       , posUrl      = [] }
 
     , Position
-      { period      = ["April to","May 2015"]
+      { period      = ["April to","May 2015", "Internship"]
       , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Academia"]
       , description = toRich "Internship at LaBRI, EVADoMe team (technical degree): implementation of a massive data visualization application based on parallel coordinates, with a distributed backend infrastructure. This work has provided some basis for a scientific publication (see below)."
       , posUrl      = [] } ]
@@ -162,7 +162,7 @@ en = Cv
 
     ,[ Skill
        { skill   = []
-       , details = "Free Software enthusiast, interested by business models involved in open-source. Inquisitive, in-depth computer science knowledge." } ]]
+       , details = "Free Software enthusiast, interested by business models involved in open-source. Inquisitive, in-depth computer science knowledge. Very interested by cryptography, compilers, and the Web as a full-fledged alternative to native platforms, with initiatives such as WebAssembly." } ]]
 
   , hobbies =
     [[ Hobby
@@ -179,7 +179,7 @@ en = Cv
 
     , Hobby
        { hobby = "Music"
-       , hobbyDetails = "Drums, percussion, piano." }
+       , hobbyDetails = "Viola, drums, percussion, piano." }
 
      , Hobby
        { hobby = "Politics"

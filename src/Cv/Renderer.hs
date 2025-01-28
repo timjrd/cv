@@ -71,7 +71,8 @@ navH :: String -> Cv -> [Cv] -> Html
 navH prefix cv cvs = columns .$ H.nav .! leaf $ pdf cv >> mapM_ htm (delete cv cvs)
   where
     htm x = H.a ! A.href (toValue $ prefix ++ lang x ++ ".html") $ toHtml $ hLang x
-    pdf x = H.a ! A.href (toValue $ prefix ++ lang x ++ ".pdf")  $ "PDF"
+    pdf x = H.a ! A.href (toValue $ prefix ++ permutation x ++ ".pdf") $ "PDF"
+    permutation x = if lang x == "en" then "en-fr" else "fr-en"
 
 headerH :: Cv -> Html
 headerH cv = H.header .! columns $ horizontal .& leaf .$ do

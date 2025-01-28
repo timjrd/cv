@@ -22,56 +22,56 @@ fr = Cv
   , website       = ["github.com/timjrd"]
   , location      = "Paris, France"
   , phone         = ""
-  , age           = "29 ans"
+  , age           = "30 ans"
 
   , introduction  = "Passionné et autodidacte, je suis titulaire d'un Master et d'un DUT en informatique. Mes différentes expériences professionnelles, universitaires, et personnelles, m'ont amené à acquérir des compétences en algorithmique et structures de données, en programmation et génie logiciel ; mais aussi en développement desktop, visualisation de données, front-ends, et systèmes Linux."
 
   , positions =
     [ Position
       { period      = ["depuis","juin 2023"]
-      , keywords    = ["C++", "Slint", "Linux embarqué", "Full remote"]
+      , keywords    = ["C++", "Slint", "Linux embarqué", "Full remote", "CDI"]
       , description = toRich "Poste d'ingénieur logiciel chez Witekio. Développement d'une démo (front-end et middleware) présentant Welma: une distribution Linux embarquée maison. Autres travaux middleware pour des clients finaux."
       , posUrl      = "youtu.be/Ewj-gwSNXmc?t=36" }
 
     , Position
       { period      = ["septembre à","novembre 2022"]
-      , keywords    = ["Rust", "Iced", "International", "Full remote"]
+      , keywords    = ["Rust", "Iced", "International", "Full remote", "Self-employed"]
       , description = toRich "Poste d'ingénieur logiciel chez Kraken. Développement de Cryptowatch Desktop (front-end), un terminal de trading multiplateforme réalisé avec Iced : un GUI toolkit maison et open-source. Équipe internationale anglophone. Licencié lors d'une réduction massive du personnel."
       , posUrl      = "youtu.be/Ja2PDH8Py5g?t=115" }
 
     , Position
       { period      = ["novembre 2020","à juillet 2022"]
-      , keywords    = ["C++", "JUCE", "MIDI/MPE", "Windows", "macOS", "iPadOS"]
-      , description = toRich "Poste de développeur chez Joué Music Instruments, fabriquant d'un instrument de musique électronique. Développement d'une application musicale multiplateforme accompagnant l'instrument. Travaux sur l'interface utilisateur et la communication avec l'appareil en MIDI, principalement."
+      , keywords    = ["C++", "JUCE", "MIDI/MPE", "Windows", "macOS", "iPadOS", "CDI"]
+      , description = toRich "Poste de développeur chez Joué Music Instruments, fabriquant d'un instrument de musique électronique. Développement d'une application musicale multiplateforme accompagnant l'appareil. Travaux sur l'interface utilisateur et la communication avec l'instrument en MIDI, principalement."
       , posUrl      = "youtu.be/C7f7ln0NPGc" }
 
     , Position
       { period      = ["avril à","août 2019"]
-      , keywords    = ["C++", "Python", "Bio-informatique", "Académique"]
+      , keywords    = ["C++", "Python", "Bio-informatique", "Académique", "Stage"]
       , description = toRich "Stage de fin d'études de Master au LaBRI, équipe Biologie Computationnelle : implémentation et benchmarking d'un programme d'analyse de séquences génétiques."
       , posUrl      = "github.com/timjrd/mrsep/tree/master/src/mrsep.ilp" }
 
     , Position
       { period      = ["juin à","juillet 2018"]
-      , keywords    = ["Haskell", "Académique"]
-      , description = toRich "Stage de première année de Master au LaBRI, équipe Méthodes Formelles : conception et réalisation d'un programme-joueur pour le jeu de société Mastermind."
+      , keywords    = ["Haskell", "Académique", "Stage"]
+      , description = toRich "Stage de première année de Master au LaBRI, équipe Méthodes Formelles : conception et réalisation d'un programme-joueur pour une généralisation du jeu de société Mastermind."
       , posUrl      = "github.com/timjrd/mastermind" }
 
     , Position
       { period      = ["juin à","juillet 2017"]
-      , keywords    = ["Scala", "Scala.js", "Académique"]
+      , keywords    = ["Scala", "Scala.js", "Académique", "CDD"]
       , description = toRich "Poste de développeur à l'ISPED, équipe ERIAS : poursuite du projet précédent en collaboration avec le LaBRI (voir ci-dessous)."
       , posUrl      = [] }
 
     , Position
       { period      = ["mars à","août 2016"]
-      , keywords    = ["Java", "Lucene", "GWT", "Académique"]
-      , description = toRich "Poste de développeur à l'ISPED, équipe ERIAS : développement d'un système d'analyse de forums en ligne, afin de détecter des mésusages de médicaments par la population, avec une application Web de visualisation."
+      , keywords    = ["Java", "Lucene", "GWT", "Académique", "CDD"]
+      , description = toRich "Poste de développeur à l'ISPED, équipe ERIAS : développement d'un système d'analyse de forums de discussion en ligne, afin de détecter des tendances de mésusage de médicaments, avec une application Web de visualisation."
       , posUrl      = [] }
 
     , Position
       { period      = ["avril à","mai 2015"]
-      , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Académique"]
+      , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Académique", "Stage"]
       , description = toRich "Stage de DUT au LaBRI, équipe EVADoMe : réalisation d'une application de visualisation de données massives, basée sur les coordonnées parallèles, avec un back-end sur infrastructure distribuée. Ce travail a fourni une base pour une publication scientifique (voir ci-dessous)."
       , posUrl      = [] } ]
 
@@ -158,7 +158,7 @@ fr = Cv
 
     ,[ Skill
        { skill   = []
-       , details = "Adepte du logiciel libre, attiré par les modèles économiques impliqués dans l'open-source. Curieux, culture approfondie en informatique." } ]]
+       , details = "Adepte du logiciel libre, attiré par les modèles économiques impliqués dans l'open-source. Curieux, culture approfondie en informatique. Très intéressé par la cryptographie, la compilation, et le Web comme solution compétitive face aux plateformes natives, avec des initiatives telles que WebAssembly." } ]]
 
   , hobbies =
     [[ Hobby
@@ -175,7 +175,7 @@ fr = Cv
 
     , Hobby
        { hobby = "Musique"
-       , hobbyDetails = "Batterie, percussions, piano." }
+       , hobbyDetails = "Alto, batterie, percussions, piano." }
 
      , Hobby
        { hobby = "Politique"
