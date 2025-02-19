@@ -24,7 +24,7 @@ en = Cv
   , phone         = ""
   , age           = "30 y/o"
 
-  , introduction  = "Fond of everything computers and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences as a software developer, a student, and a strong hobbyist, I have acquired skills in algorithmics and data structures, programming and software engineering; but also in desktop development, data visualization, front-ends, and Linux systems."
+  , introduction  = "Fond of everything computers and autodidact, I hold a master's degree, and a technical degree in computer science. Throughout my experiences as a software developer, a student, and a strong hobbyist, I have acquired skills in algorithmics and data structures, programming and software engineering; but also in desktop development, data visualization, front-ends, Linux systems, electronic music and digital audio."
 
   , positions =
     [ Position
@@ -64,14 +64,14 @@ en = Cv
       , posUrl      = [] }
 
     , Position
-      { period      = ["March to","August 2016", "Contract"]
-      , keywords    = ["Java", "Lucene", "GWT", "Academia"]
+      { period      = ["March to","August 2016"]
+      , keywords    = ["Java", "Lucene", "GWT", "Academia", "Contract"]
       , description = toRich "Software developer position at ISPED, ERIAS team: development of an online discussion forums analysis system targeted at spotting medication misuse trends, with a Web-based visualization application."
       , posUrl      = [] }
 
     , Position
-      { period      = ["April to","May 2015", "Internship"]
-      , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Academia"]
+      { period      = ["April to","May 2015"]
+      , keywords    = ["C++", "OpenGL", "GLSL", "Scala", "Academia", "Internship"]
       , description = toRich "Internship at LaBRI, EVADoMe team (technical degree): implementation of a massive data visualization application based on parallel coordinates, with a distributed backend infrastructure. This work has provided some basis for a scientific publication (see below)."
       , posUrl      = [] } ]
 
@@ -101,7 +101,7 @@ en = Cv
 
     , Language
       { language = "English"
-      , status   = "See position at Kraken (international English-speaking team). Daily reading of technical articles and documentation." } ]
+      , status   = "See position at Kraken Digital Asset Exchange (international English-speaking team). Daily reading of various contents in English. Je n'ai pas de TOEIC/TOEFL, mais je serai ravi d'échanger avec vous en anglais." } ]
 
   , skills =
     [[ Skill
@@ -162,7 +162,7 @@ en = Cv
 
     ,[ Skill
        { skill   = []
-       , details = "Free Software enthusiast, interested by business models involved in open-source. Inquisitive, in-depth computer science knowledge. Very interested by cryptography, compilers, and the Web as a full-fledged alternative to native platforms, with initiatives such as WebAssembly." } ]]
+       , details = "Free Software enthusiast, interested by business models involved in open-source. In-depth computer science knowledge. Interested by cryptography, compilers, and the Web as a full-fledged alternative to native platforms, with initiatives such as WebAssembly." } ]]
 
   , hobbies =
     [[ Hobby
@@ -187,7 +187,7 @@ en = Cv
 
     ,[ Hobby
        { hobby = []
-       , hobbyDetails = "Went to Gabon, Japan, Senegal, United States, Turkey, New Caledonia, Italy, United Kingdom, Spain, Belgium." } ]
+       , hobbyDetails = "Went to Gabon, Japan, Senegal, United States, Turkey, New Caledonia, Italy, United Kingdom, Netherlands, Spain, Belgium." } ]
 
     ,[ Hobby
        { hobby = []

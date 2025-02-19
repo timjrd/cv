@@ -24,7 +24,7 @@ fr = Cv
   , phone         = ""
   , age           = "30 ans"
 
-  , introduction  = "Passionné et autodidacte, je suis titulaire d'un Master et d'un DUT en informatique. Mes différentes expériences professionnelles, universitaires, et personnelles, m'ont amené à acquérir des compétences en algorithmique et structures de données, en programmation et génie logiciel ; mais aussi en développement desktop, visualisation de données, front-ends, et systèmes Linux."
+  , introduction  = "Passionné et autodidacte, je suis titulaire d'un Master et d'un DUT en informatique. Mes différentes expériences professionnelles, universitaires, et personnelles, m'ont amené à acquérir des compétences en algorithmique et structures de données, en programmation et génie logiciel ; mais aussi en développement desktop, visualisation de données, front-ends, systèmes Linux, musique électronique et audio numérique."
 
   , positions =
     [ Position
@@ -97,7 +97,7 @@ fr = Cv
   , languages =
     [ Language
       { language = []
-      , status   = "Voir poste chez Kraken (équipe internationale anglophone). Lecture quotidienne d'articles techniques et de documentation." } ]
+      , status   = "Voir poste chez Kraken Digital Asset Exchange (équipe internationale anglophone). Lecture quotidienne de divers contenus en anglais. Not a TOEIC/TOEFL holder, still I would be happy to have a real conversation with you." } ]
 
   , skills =
     [[ Skill
@@ -183,7 +183,7 @@ fr = Cv
 
     ,[ Hobby
        { hobby = []
-       , hobbyDetails = "A visité Gabon, Japon, Sénégal, États-Unis, Turquie, Nouvelle-Calédonie, Italie, Royaume-Uni, Espagne, Belgique." } ]
+       , hobbyDetails = "A visité Gabon, Japon, Sénégal, États-Unis, Turquie, Nouvelle-Calédonie, Italie, Royaume-Uni, Pays-Bas, Espagne, Belgique." } ]
 
     ,[ Hobby
        { hobby = []
